@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>DESILA — Penida</title>
+    <meta name="description" content="Jelajahi keindahan Nusa Penida bersama DESILA." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DESILA — Penida" />
+    <meta property="og:description" content="Jelajahi keindahan Nusa Penida bersama DESILA." />
+    <meta property="og:image" content="logo/Logo Website.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo/Logo Website.png" />
+    <link rel="shortcut icon" type="image/png" href="logo/Logo Website.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome CDN untuk Ikon Sosial Media & Kontak -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Overlay Background Gambar Seluruh Halaman -->
+    <div class="global-bg"></div>
+
+    <!-- ================= NAV / HEADER ================= -->
+    <header class="header">
+        <nav class="nav" aria-label="Main Navigation">
+            <div class="wrap nav-container">
+                <a href="#top" class="brand logo" aria-label="DESILA Penida Homepage">
+                    <img class="brand-mark" src="logo/Logo Website.png" alt="DESILA Penida logo" width="36"
+                        height="36" />
+                    DESILA<span>penida</span>
+                </a>
+
+                <ul class="nav-links" id="navLinks" role="menubar">
+                    <li role="none"><a href="#rooms" role="menuitem">Kamar & Gallery</a></li>
+                    <li role="none"><a href="#snorkeling" role="menuitem">Snorkeling</a></li>
+                    <li role="none"><a href="#tours" role="menuitem">Paket Wisata</a></li>
+                    <li role="none"><a href="#trekking" role="menuitem">Trekking</a></li>
+                    <li role="none"><a href="#jukung" role="menuitem">Memancing di Jukung</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Kontak</a></li>
+                    <li role="none"><button class="btn btn-primary btn-open-modal">Pesan Sekarang</button></li>
+                </ul>
+
+                <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="top">
+        <div class="wrap hero-content">
+            <p class="eyebrow-hero">Welcome to Paradise</p>
+            <h1>DESILA<span>penida</span></h1>
+            <p class="hero-subtext">Nikmati Pengalaman Wisata & Penginapan Terbaik di Nusa Penida</p>
+            <div class="hero-actions">
+                <a href="#rooms" class="btn btn-hero-secondary">Jelajahi Kamar</a>
+                <button class="btn btn-hero btn-open-modal">Pesan Sekarang</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ROOMS & VIEWS SECTION ================= -->
+    <section class="main-section" id="rooms">
+        <div class="wrap">
+            <div class="section-head text-center">
+                <p class="eyebrow">Accommodation &amp; Scenery</p>
+                <h2>Kamar & Pemandangan</h2>
+                <p class="section-desc">
+                    Pilih tipe kamar impian Anda atau nikmati galeri pemandangan indah dari area penginapan kami.
+                </p>
+            </div>
+
+            <div class="pill-menu" role="tablist">
+                <button class="pill-btn active" data-target="roomSection" id="tab-room" role="tab">
+                    Rooms (Twin &amp; Double)
+                </button>
+                <button class="pill-btn" data-target="viewSection" id="tab-view" role="tab">
+                    Room Views Gallery
+                </button>
+            </div>
+
+            <!-- TAB ROOMS -->
+            <div class="content-section" id="roomSection" role="tabpanel">
+                <div class="grid-2">
+                    <article class="card-item">
+                        <div class="card-img-wrap">
+                            <img class="card-photo" src="gambar/Twins.jpg" alt="Twin Room" loading="lazy" />
+                        </div>
+                        <div class="card-body">
+                            <div class="card-head">
+                                <span class="card-no">NP&ndash;R1</span>
+                                <span class="card-price">450K IDR <small>/ malam</small></span>
+                            </div>
+                            <h4>Twin Room</h4>
+                            <p>Cocok untuk keluarga atau teman. Dilengkapi dengan dua kasur single yang nyaman dan
+                                fasilitas lengkap.</p>
+                            <ul class="card-tags">
+                                <li>Air Conditioning</li>
+                                <li>Free Wi-Fi</li>
+                                <li>Ensuite Bathroom</li>
+                                <li>Sarapan Gratis</li>
+                            </ul>
+                            <button class="btn btn-card btn-open-modal" data-service="Twin Room">Pesan Kamar</button>
+                        </div>
+                    </article>
+
+                    <article class="card-item">
+                        <div class="card-img-wrap">
+                            <img class="card-photo" src="gambar/Double.jpg" alt="Double Room" loading="lazy" />
+                        </div>
+                        <div class="card-body">
+                            <div class="card-head">
+                                <span class="card-no">NP&ndash;R2</span>
+                                <span class="card-price">450K IDR <small>/ malam</small></span>
+                            </div>
+                            <h4>Double Room</h4>
+                            <p>Sangat ideal untuk pasangan atau perorangan. Dilengkapi kasur double king-size dengan
+                                suasana tenang.</p>
+                            <ul class="card-tags">
+                                <li>Air Conditioning</li>
+                                <li>Free Wi-Fi</li>
+                                <li>Ensuite Bathroom</li>
+                                <li>Sarapan Gratis</li>
+                            </ul>
+                            <button class="btn btn-card btn-open-modal" data-service="Double Room">Pesan Kamar</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- TAB VIEWS GALLERY -->
+            <div class="content-section" id="viewSection" style="display: none;" role="tabpanel">
+                <div class="grid-3">
+                    <article class="ticket-card">
+                        <img class="ticket-photo" src="seaview/Balkon.jpg" alt="Balcony View 1" loading="lazy" />
+                        <div class="ticket-body">
+                            <span class="ticket-no">VIEW 01</span>
+                            <h4>Balkon Kamar</h4>
+                            <p>Pemandangan indah langsung dari balkon</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <img class="ticket-photo" src="seaview/Balkon2.jpg" alt="Balcony View 2" loading="lazy" />
+                        <div class="ticket-body">
+                            <span class="ticket-no">VIEW 02</span>
+                            <h4>Balkon Samping</h4>
+                            <p>Suasana santai menghadap laut</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <img class="ticket-photo" src="seaview/Sunrise.jpg" alt="Sunrise View" loading="lazy" />
+                        <div class="ticket-body">
+                            <span class="ticket-no">VIEW 03</span>
+                            <h4>Sunrise Point</h4>
+                            <p>Pemandangan matahari terbit di pagi hari</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <img class="ticket-photo" src="seaview/sea.jpeg" alt="Blue Ocean View" loading="lazy" />
+                        <div class="ticket-body">
+                            <span class="ticket-no">VIEW 04</span>
+                            <h4>Laut Biru</h4>
+                            <p>Air laut jernih khas Nusa Penida</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <img class="ticket-photo" src="seaview/views.jpeg" alt="Waterfront View" loading="lazy" />
+                        <div class="ticket-body">
+                            <span class="ticket-no">VIEW 05</span>
+                            <h4>Panorama Pesisir</h4>
+                            <p>Keindahan garis pantai Nusa Penida</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <img class="ticket-photo" src="seaview/Sunrise and ocean view villa.jpg"
+                            alt="Sunrise Ocean Villa" loading="lazy" />
+                        <div class="ticket-body">
+                            <span class="ticket-no">VIEW 06</span>
+                            <h4>Villa Sunrise</h4>
+                            <p>Sudut terbaik menikmati pemandangan laut</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SNORKELING SECTION ================= -->
+    <section class="main-section" id="snorkeling">
+        <div class="wrap">
+            <div class="section-head text-center">
+                <p class="eyebrow">Underwater Experience</p>
+                <h2>Snorkeling</h2>
+                <p class="section-desc">Jelajahi keindahan bawah laut Nusa Penida dan berenang bersama Pari Manta serta
+                    terumbu karang alami.</p>
+            </div>
+            <div class="grid-2">
+                <article class="card-item">
+                    <div class="card-body">
+                        <h4>Paket Snorkeling Manta Bay</h4>
+                        <p class="feature-price">350K IDR / Orang</p>
+                        <p>Mengunjungi 4 titik populer: Manta Bay, Gamat Bay, Wall Point, dan Turtle Point. Sudah
+                            termasuk alat & foto underwater.</p>
+                        <ul class="card-tags">
+                            <li>Kapal Snorkeling</li>
+                            <li>Alat Snorkeling Lengkap</li>
+                            <li>Pemandu Profesional</li>
+                            <li>Foto/Video GoPro</li>
+                        </ul>
+                        <br>
+                        <button class="btn btn-card btn-open-modal" data-service="Snorkeling Manta Bay">Pesan Paket
+                            Snorkeling</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <div class="card-body">
+                        <h4>Private Snorkeling Boat</h4>
+                        <p class="feature-price">1.200K IDR / Boat</p>
+                        <p>Layanan kapal pribadi tanpa digabung dengan tamu lain. Fleksibel menentukan waktu dan durasi
+                            snorkeling.</p>
+                        <ul class="card-tags">
+                            <li>Privat (Maks 6 Orang)</li>
+                            <li>Peralatan Premium</li>
+                            <li>Air Mineral</li>
+                            <li>Asuransi Perjalanan</li>
+                        </ul>
+                        <br>
+                        <button class="btn btn-card btn-open-modal" data-service="Private Snorkeling Boat">Pesan Boat
+                            Private</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TOURS SECTION ================= -->
+    <section class="main-section" id="tours">
+        <div class="wrap">
+            <div class="section-head text-center">
+                <p class="eyebrow">Island Exploration</p>
+                <h2>Paket Wisata</h2>
+                <p class="section-desc">Nikmati kemudahan keliling destinasi eksotis Nusa Penida dengan transportasi
+                    ber-AC & driver lokal berpengalaman.</p>
+            </div>
+            <div class="grid-3">
+                <article class="card-item">
+                    <div class="card-body">
+                        <h4>Tour Barat (West)</h4>
+                        <p class="feature-price">600K IDR / Mobil</p>
+                        <p>Mengunjungi Kelingking Beach, Broken Beach, Angel's Billabong, dan Crystal Bay.</p>
+                        <br>
+                        <button class="btn btn-card btn-open-modal" data-service="Tour Barat">Pesan Tour Barat</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <div class="card-body">
+                        <h4>Tour Timur (East)</h4>
+                        <p class="feature-price">650K IDR / Mobil</p>
+                        <p>Mengunjungi Diamond Beach, Atuh Beach, Rumah Pohon Molenteng, dan Teletubbies Hill.</p>
+                        <br>
+                        <button class="btn btn-card btn-open-modal" data-service="Tour Timur">Pesan Tour Timur</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <div class="card-body">
+                        <h4>Tour Kombinasi</h4>
+                        <p class="feature-price">800K IDR / Mobil</p>
+                        <p>Kombinasi destinasi hits bagian Barat & Timur dalam 1 hari penuh pengalaman seru.</p>
+                        <br>
+                        <button class="btn btn-card btn-open-modal" data-service="Tour Kombinasi">Pesan
+                            Kombinasi</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TREKKING SECTION ================= -->
+    <section class="main-section" id="trekking">
+        <div class="wrap">
+            <div class="section-head text-center">
+                <p class="eyebrow">Adventure & Hiking</p>
+                <h2>Trekking</h2>
+                <p class="section-desc">Tantang diri Anda menjelajahi tebing raksasa dan pantai tersembunyi dengan
+                    pemandangan spektakuler.</p>
+            </div>
+            <div class="grid-2">
+                <article class="card-item">
+                    <div class="card-body">
+                        <h4>Trekking Kelingking Cliff</h4>
+                        <p class="feature-price">250K IDR / Pemandu</p>
+                        <p>Petualangan menuruni tebing ikonik Kelingking Beach hingga tiba di pasir putih yang indah
+                            didampingi pemandu lokal berpengalaman.</p>
+                        <button class="btn btn-card btn-open-modal" data-service="Trekking Kelingking">Pesan
+                            Trekking</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <div class="card-body">
+                        <h4>Trekking Peguyangan Waterfall</h4>
+                        <p class="feature-price">300K IDR / Pemandu</p>
+                        <p>Menelusuri ratusan anak tangga biru menempel di tebing curam menuju mata air alami dan
+                            pemandangan samudera lepas.</p>
+                        <button class="btn btn-card btn-open-modal" data-service="Trekking Peguyangan">Pesan
+                            Trekking</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= JUKUNG FISHING SECTION ================= -->
+    <section class="main-section" id="jukung">
+        <div class="wrap">
+            <div class="section-head text-center">
+                <p class="eyebrow">Traditional Fishing</p>
+                <h2>Memancing di Jukung</h2>
+                <p class="section-desc">Merasakan sensasi memancing tradisional Bali menggunakan perahu kayu Jukung khas
+                    nelayan Nusa Penida.</p>
+            </div>
+            <div class="grid-1 text-center">
+                <article class="card-item" style="max-width: 650px; margin: 0 auto;">
+                    <div class="card-body">
+                        <h4>Paket Memancing Tradisional Jukung</h4>
+                        <p class="feature-price">500K IDR / 3 Jam</p>
+                        <p>Pengalaman memancing santai di perairan jernih bersama kapten lokal. Termasuk peralatan
+                            pancing tradisional, umpan, dan hasil tangkapan bisa dibawa pulang atau dibakar!</p>
+                        <br>
+                        <button class="btn btn-card btn-open-modal" data-service="Memancing Jukung">Pesan Paket
+                            Memancing</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="main-section" id="contact">
+        <div class="wrap">
+            <div class="section-head text-center">
+                <p class="eyebrow">Hubungi Kami</p>
+                <h2>Hubungi Kami</h2>
+                <p class="section-desc">Ada pertanyaan atau butuh bantuan rencana liburan Anda? Hubungi kami langsung
+                    melalui WhatsApp atau Email.</p>
+            </div>
+
+            <!-- Container Kartu Kontak -->
+            <div class="contact-box">
+                <!-- Kartu 1: WhatsApp -->
+                <a href="https://wa.me/6282340510917" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp / Telepon</h4>
+                    <p>+62 823-4051-0917</p>
+                    <!-- Kartu 2: instagram -->
+                    <a href="https://instagram.com/bintangnusapenidatour" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h4>Instagram</h4>
+                        <p>@bintangnusapenidatour</p>
+                    </a>
+                    <a href="https://www.google.com/maps/place/DESILA+Beach+House/@-8.7071695,115.5831859,861m/data=!3m2!1e3!4b1!4m9!3m8!1s0x2dd2776fafc3a6c9:0x72d55684cdd29784!5m2!4m1!1i2!8m2!3d-8.7071695!4d115.5857608!16s%2Fg%2F11fks6jbwq?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+                        target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Lokasi</h4>
+                        <p>Dusun Karangsari, Desa Suana, Nusa Penida, Klungkung, Bali, Indonesia</p>
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="wrap footer-container">
+            <!-- Kolom Brand & Alamat -->
+            <div class="footer-brand">
+                <a href="#top" class="brand logo">
+                    <img class="brand-mark" src="logo/Logo Website.png" alt="DESILA Penida logo" width="36"
+                        height="36" />
+                    DESILA<span>penida</span>
+                </a>
+                <p class="footer-address">
+                    <i class="fas fa-map-marker-alt"></i> Dusun Karangsari, Desa Suana, Nusa Penida, Klungkung, Bali,
+                    Indonesia
+                </p>
+            </div>
+
+            <!-- Kolom Sosial Media & Kontak -->
+            <div class="footer-social">
+                <h4>Ikuti & Hubungi Kami</h4>
+                <div class="social-links">
+                    <a href="https://wa.me/6282340510917" target="_blank" aria-label="WhatsApp" class="social-icon wa">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://instagram.com/desilabeachhouse" target="_blank" aria-label="Instagram"
+                        class="social-icon ig">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com/desilabeachhouse19" target="_blank" aria-label="Facebook"
+                        class="social-icon fb">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+                <p class="handle-text">@desilabeachhouse</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="wrap">
+                <p>&copy; 2026 DESILA Penida. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= MODAL FORM PEMESANAN ================= -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="closeModal" aria-label="Tutup Modal">&times;</button>
+            <div class="modal-header">
+                <h3>Form Pemesanan</h3>
+                <p>Isi formulir di bawah ini untuk melakukan pemesanan langsung via WhatsApp.</p>
+            </div>
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap</label>
+                    <input type="text" id="name" required placeholder="Contoh: Budi Santoso" />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Nomor WhatsApp</label>
+                    <input type="tel" id="phone" required placeholder="Contoh: +6282340510917" />
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Layanan / Paket yang Dipilih</label>
+                    <select id="service" required>
+                        <option value="Twin Room">Kamar - Twin Room</option>
+                        <option value="Double Room">Kamar - Double Room</option>
+                        <option value="Snorkeling Manta Bay">Snorkeling Manta Bay</option>
+                        <option value="Private Snorkeling Boat">Private Snorkeling Boat</option>
+                        <option value="Tour Barat">Tour Paket Barat</option>
+                        <option value="Tour Timur">Tour Paket Timur</option>
+                        <option value="Tour Kombinasi">Tour Kombinasi</option>
+                        <option value="Trekking Kelingking">Trekking Kelingking Cliff</option>
+                        <option value="Trekking Peguyangan">Trekking Peguyangan Waterfall</option>
+                        <option value="Memancing Jukung">Memancing di Jukung</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Tanggal Kegiatan/Check-in</label>
+                        <input type="date" id="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Jumlah Orang</label>
+                        <input type="number" id="guests" min="1" value="2" required />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Catatan Tambahan (Opsional)</label>
+                    <textarea id="notes" rows="3"
+                        placeholder="Contoh: Butuh penjemputan di Pelabuhan Sampalan"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">Kirim Pemesanan via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT INTERAKTIF -->
+    <script>
+        // Switch Tab Room vs Views
+        const pillBtns = document.querySelectorAll('.pill-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        pillBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                pillBtns.forEach(b => b.classList.remove('active'));
+                contentSections.forEach(s => s.style.display = 'none');
+
+                btn.classList.add('active');
+                const targetId = btn.getAttribute('data-target');
+                document.getElementById(targetId).style.display = 'block';
+            });
+        });
+
+        // Toggle Navbar Mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById('bookingModal');
+        const openModalBtns = document.querySelectorAll('.btn-open-modal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const serviceSelect = document.getElementById('service');
+
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const serviceName = btn.getAttribute('data-service');
+                if (serviceName) {
+                    serviceSelect.value = serviceName;
+                }
+                modal.classList.add('active');
+            });
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Submit Form ke WhatsApp
+        document.getElementById('bookingForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const service = document.getElementById('service').value;
+            const date = document.getElementById('date').value;
+            const guests = document.getElementById('guests').value;
+            const notes = document.getElementById('notes').value;
+
+            const adminPhone = "+6282340510917"; // Ganti nomor WhatsApp Anda di sini
+
+            const message = `Halo DESILA Penida, saya ingin memesan:\n\n` +
+                `• *Nama*: ${name}\n` +
+                `• *No. WA*: ${phone}\n` +
+                `• *Layanan*: ${service}\n` +
+                `• *Tanggal*: ${date}\n` +
+                `• *Jumlah Orang*: ${guests}\n` +
+                `• *Catatan*: ${notes ? notes : '-'}\n\n` +
+                `Mohon konfirmasi ketersediaannya. Terima kasih!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${adminPhone}?text=${encodedMessage}`, '_blank');
+            modal.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,685 @@
+/* ================= RESET & VARIABLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ff6b4a;
+    --primary-hover: #e05536;
+    --bg-dark-card: rgba(13, 27, 42, 0.75);
+    --bg-dark-border: rgba(255, 255, 255, 0.15);
+    --text-white: #ffffff;
+    --text-sub: #d0d7de;
+    --font-heading: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    color: var(--text-white);
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ================= BACKGROUND UTAMA (FOTO FULLSCREEN) ================= */
+.global-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(5, 15, 25, 0.55),
+        rgba(5, 15, 25, 0.88)
+    ), url('view/Nature.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+/* ================= LAYOUT CONTAINER ================= */
+.wrap {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ================= HEADER / NAV ================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 20, 30, 0.7);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--bg-dark-border);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.brand span {
+    color: var(--primary-color);
+}
+
+.brand-mark {
+    border-radius: 50%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-hero {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 14px 36px;
+    font-size: 1rem;
+    box-shadow: 0 8px 20px rgba(255, 107, 74, 0.4);
+}
+
+.btn-hero-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid var(--bg-dark-border);
+    padding: 14px 30px;
+    backdrop-filter: blur(5px);
+}
+
+.btn-hero-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.btn-card {
+    background-color: var(--primary-color);
+    color: #fff;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-card:hover {
+    background-color: var(--primary-hover);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.eyebrow-hero {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.hero-content h1 span {
+    font-weight: 400;
+    font-style: italic;
+    color: var(--primary-color);
+}
+
+.hero-subtext {
+    font-size: 1.2rem;
+    color: var(--text-sub);
+    margin-bottom: 30px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ================= SECTION COMMON ================= */
+.main-section {
+    padding: 70px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.section-head h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+}
+
+.section-desc {
+    max-width: 600px;
+    margin: 0 auto 35px auto;
+    color: var(--text-sub);
+    font-size: 0.95rem;
+}
+
+.feature-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* ================= PILL MENU ================= */
+.pill-menu {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.pill-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--bg-dark-border);
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.pill-btn.active,
+.pill-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* ================= CARDS GRID ================= */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card-item {
+    background: var(--bg-dark-card);
+    border: 1px solid var(--bg-dark-border);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-img-wrap {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-no {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.card-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.card-body h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.card-tags li {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 20px;
+    color: var(--text-sub);
+}
+
+.ticket-card {
+    background: var(--bg-dark-card);
+    border: 1px solid var(--bg-dark-border);
+    border-radius: 14px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.ticket-photo {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.ticket-body {
+    padding: 16px;
+}
+
+.ticket-no {
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+/* ================= CONTACT SECTION FIX ================= */
+.contact-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membagi menjadi 3 kolom sejajar */
+    gap: 24px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+.contact-card {
+    background: rgba(13, 27, 42, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek Hover untuk Kartu */
+a.contact-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff6b4a;
+    box-shadow: 0 10px 25px rgba(255, 107, 74, 0.2);
+}
+
+/* Styling Ikon di Dalam Kartu */
+.contact-icon {
+    font-size: 2.2rem;
+    color: #ff6b4a;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 107, 74, 0.1);
+    border-radius: 50%;
+}
+
+.contact-card h4 {
+    color: #ff6b4a;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #d0d7de;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    word-break: break-word; /* Mencegah email panjang merusak tampilan */
+}
+
+/* Responsif untuk Layar HP / Tablet */
+@media (max-width: 900px) {
+    .contact-box {
+        grid-template-columns: 1fr; /* Menjadi 1 kolom memanjang ke bawah di HP */
+        gap: 16px;
+    }
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: rgba(8, 15, 24, 0.92);
+    border-top: 1px solid var(--bg-dark-border);
+    backdrop-filter: blur(15px);
+    padding-top: 50px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-address {
+    margin-top: 15px;
+    color: var(--text-sub);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-address i {
+    color: var(--primary-color);
+    margin-right: 6px;
+}
+
+.footer-social h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--bg-dark-border);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.handle-text {
+    color: var(--text-sub);
+    font-size: 0.85rem;
+}
+
+.footer-bottom {
+    background: rgba(4, 9, 15, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 18px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-sub);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* ================= MODAL FORM FIX ================= */
+.modal-overlay {
+    display: none; /* Sembunyikan modal secara default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Tampilkan modal saat class active ditambahkan lewat JavaScript */
+.modal-overlay.active {
+    display: flex !important;
+}
+
+.modal-content {
+    background: #0f1c28;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.modal-header p {
+    color: #d0d7de;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.booking-form .form-group {
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.booking-form label {
+    display: block;
+    font-size: 0.85rem;
+    color: #d0d7de;
+    margin-bottom: 6px;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+
+.booking-form select option {
+    background: #0f1c28;
+    color: #ffffff;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #ff6b4a;
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
