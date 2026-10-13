@@ -334,11 +334,7 @@ form.addEventListener("submit", function (e) {
                     ? "Total Boat for Snorkeling"
                     : "Total People for Snorkeling",
         },
-        {
-            cond: document.getElementById("trekSelect").value !== "0",
-            input: trekQtyInput,
-            label: "Total People for Trekking",
-        },
+
         {
             cond: document.getElementById("jukungSelect").value.split("|")[0] !== "0",
             input: jukQtyInput,
@@ -377,7 +373,7 @@ form.addEventListener("submit", function (e) {
     const travelDate =
         document.getElementById("travelDate").value || "(travel date not set)";
 
-    let msg = `Hi DESILA Penida, I'd like to book:%0A`;
+    let msg = `Hi DESILA Beach House, I'd like to book:%0A`;
     msg += `*Name:* ${name}%0A`;
     msg += `*WhatsApp:* ${wa}%0A`;
     msg += `*Travel Date:* ${travelDate}%0A%0A`;
@@ -402,9 +398,7 @@ form.addEventListener("submit", function (e) {
         msg += `*Snorkeling Private:* ${privateText} (x${snorkQty} boat(s))%0A`;
     }
 
-    if (document.getElementById("trekSelect").value !== "0") {
-        msg += `*Trekking:* ${trekText} (x${trekQty} people)%0A`;
-    }
+
 
     if (document.getElementById("jukungSelect").value.split("|")[0] !== "0") {
         msg += `*Jukung Fishing:* ${jukText} (x${jukQty} jukung)%0A`;

@@ -4,29 +4,33 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>DESILA — Penida</title>
-    <meta name="description" content="Jelajahi keindahan Nusa Penida bersama DESILA." />
+    <title>DESILA Beach House — Villa & Island Tours Nusa Penida, Bali</title>
+    <meta name="description"
+        content="Menginap mewah di tepi pantai Nusa Penida bersama Villa DESILA Beach House. Nikmati pemandangan laut lepas, kolam renang pantai, tur pulau, dan snorkeling manta." />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="DESILA — Penida" />
-    <meta property="og:description" content="Jelajahi keindahan Nusa Penida bersama DESILA." />
-    <meta property="og:image" content="logo/Logo Website.png" />
+    <meta property="og:title" content="DESILA Beach House — Villa & Tours Nusa Penida" />
+    <meta property="og:description"
+        content="Pengalaman menginap tepi pantai terbaik dan wisata eksotis di Nusa Penida bersama Villa DESILA Beach House." />
+    <meta property="og:image" content="logo/Logo Logo.png" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="logo/Logo Website.png" />
-    <link rel="shortcut icon" type="image/png" href="logo/Logo Website.png" />
+    <link rel="icon" type="image/png" href="logo/Logo.png" />
+    <link rel="shortcut icon" type="image/png" href="logo/Logo.png" />
 
-    <!-- Fonts -->
+    <!-- Google Fonts (Aesthetic Typography) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <!-- Font Awesome CDN untuk Ikon Sosial Media & Kontak -->
+
+    <!-- Font Awesome CDN untuk Ikon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- Stylesheet -->
+
+    <!-- Stylesheet Utama -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -39,22 +43,52 @@
     <header class="header">
         <nav class="nav" aria-label="Main Navigation">
             <div class="wrap nav-container">
-                <a href="#top" class="brand logo" aria-label="DESILA Penida Homepage">
-                    <img class="brand-mark" src="logo/Logo Website.png" alt="DESILA Penida logo" width="36"
-                        height="36" />
-                    DESILA<span>penida</span>
+                <a href="#top" class="brand logo notranslate" aria-label="DESILA Beach House Homepage">
+                    <img class="brand-mark" src="logo/Logo.png" alt="DESILA Beach House logo" width="46" height="46" />
+                    <span class="brand-text">DESILA<span>Beach House</span></span>
                 </a>
 
+                <!-- Nav Links -->
                 <ul class="nav-links" id="navLinks" role="menubar">
-                    <li role="none"><a href="#rooms" role="menuitem">Kamar & Gallery</a></li>
-                    <li role="none"><a href="#snorkeling" role="menuitem">Snorkeling</a></li>
+                    <li role="none"><a href="#rooms" role="menuitem">Kamar</a></li>
+                    <li role="none"><a href="#tentang" role="menuitem">Tentang Kami</a></li>
                     <li role="none"><a href="#tours" role="menuitem">Paket Wisata</a></li>
-                    <li role="none"><a href="#trekking" role="menuitem">Trekking</a></li>
-                    <li role="none"><a href="#jukung" role="menuitem">Memancing di Jukung</a></li>
+                    <li role="none"><a href="#snorkeling" role="menuitem">Snorkeling</a></li>
+                    <li role="none"><a href="#jukung" role="menuitem">Jukung</a></li>
+                    <li role="none"><a href="#ulasan" role="menuitem">Ulasan</a></li>
                     <li role="none"><a href="#contact" role="menuitem">Kontak</a></li>
-                    <li role="none"><button class="btn btn-primary btn-open-modal">Pesan Sekarang</button></li>
                 </ul>
 
+                <!-- Nav Actions: Pesan Sekarang & Dropdown Bahasa -->
+                <div class="nav-actions notranslate">
+                    <button class="btn btn-primary btn-nav-cta btn-open-modal">
+                        <i class="fas fa-calendar-check"></i> Pesan Sekarang
+                    </button>
+
+                    <div class="lang-dropdown-wrap">
+                        <button type="button" class="lang-toggle-btn" id="langToggleBtn" aria-label="Pilih Bahasa">
+                            <i class="fas fa-globe"></i> <span id="currentLangCode">ID</span> <i
+                                class="fas fa-chevron-down" style="font-size: 0.65rem;"></i>
+                        </button>
+                        <div class="lang-dropdown-list" id="langDropdownList">
+                            <button type="button" class="lang-opt" onclick="translateLanguage('id')"><span>🇮🇩</span>
+                                Indonesia</button>
+                            <button type="button" class="lang-opt" onclick="translateLanguage('en')"><span>🇬🇧</span>
+                                English</button>
+                            <button type="button" class="lang-opt" onclick="translateLanguage('fr')"><span>🇫🇷</span>
+                                Français</button>
+                            <button type="button" class="lang-opt" onclick="translateLanguage('de')"><span>🇩🇪</span>
+                                Deutsch</button>
+                            <button type="button" class="lang-opt" onclick="translateLanguage('ru')"><span>🇷🇺</span>
+                                Русский</button>
+                            <button type="button" class="lang-opt"
+                                onclick="translateLanguage('zh-CN')"><span>🇨🇳</span> 中文</button>
+                        </div>
+                    </div>
+                    <div id="google_translate_element"></div>
+                </div>
+
+                <!-- Hamburger Button Mobile -->
                 <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu">
                     <span class="hamburger-bar"></span>
                     <span class="hamburger-bar"></span>
@@ -67,12 +101,17 @@
     <!-- ================= HERO SECTION ================= -->
     <section class="hero-section" id="top">
         <div class="wrap hero-content">
-            <p class="eyebrow-hero">Welcome to Paradise</p>
-            <h1>DESILA<span>penida</span></h1>
-            <p class="hero-subtext">Nikmati Pengalaman Wisata & Penginapan Terbaik di Nusa Penida</p>
+            <p class="eyebrow-hero">Selamat Datang di Surga Tropis</p>
+            <h1 class="notranslate">DESILA<span>Beach House</span></h1>
+            <p class="hero-subtext">Nikmati Pengalaman Menginap Istimewa di Tepi Laut &amp; Eksplorasi Pesona
+                Menakjubkan Nusa Penida, Bali</p>
             <div class="hero-actions">
-                <a href="#rooms" class="btn btn-hero-secondary">Jelajahi Kamar</a>
-                <button class="btn btn-hero btn-open-modal">Pesan Sekarang</button>
+                <a href="#rooms" class="btn btn-hero-secondary">
+                    <i class="fas fa-bed"></i> Jelajahi Kamar
+                </a>
+                <button class="btn btn-hero btn-open-modal">
+                    <i class="fas fa-ticket-alt"></i> Pesan Sekarang
+                </button>
             </div>
         </div>
     </section>
@@ -81,19 +120,20 @@
     <section class="main-section" id="rooms">
         <div class="wrap">
             <div class="section-head text-center">
-                <p class="eyebrow">Accommodation &amp; Scenery</p>
-                <h2>Kamar & Pemandangan</h2>
+                <p class="eyebrow">AKOMODASI &amp; PEMANDANGAN</p>
+                <h2>Kamar Pilihan Anda</h2>
                 <p class="section-desc">
-                    Pilih tipe kamar impian Anda atau nikmati galeri pemandangan indah dari area penginapan kami.
+                    Pilih kenyamanan kamar impian Anda dengan pemandangan laut lepas yang memukau, atau nikmati galeri
+                    panorama indah dari area sekitar penginapan kami.
                 </p>
             </div>
 
             <div class="pill-menu" role="tablist">
                 <button class="pill-btn active" data-target="roomSection" id="tab-room" role="tab">
-                    Rooms (Twin &amp; Double)
+                    <i class="fas fa-door-open"></i> Kamar (Spesial &amp; Ganda)
                 </button>
                 <button class="pill-btn" data-target="viewSection" id="tab-view" role="tab">
-                    Room Views Gallery
+                    <i class="fas fa-images"></i> Galeri Pemandangan Villa
                 </button>
             </div>
 
@@ -102,45 +142,55 @@
                 <div class="grid-2">
                     <article class="card-item">
                         <div class="card-img-wrap">
-                            <img class="card-photo" src="gambar/Twins.jpg" alt="Twin Room" loading="lazy" />
+                            <img class="card-photo" src="gambar/Special Room.jpg" alt="Kamar Spesial DESILA Beach House"
+                                loading="lazy" />
                         </div>
                         <div class="card-body">
                             <div class="card-head">
                                 <span class="card-no">NP&ndash;R1</span>
-                                <span class="card-price">450K IDR <small>/ malam</small></span>
+                                <span class="card-price">Rp 400.000 <small>/ per malam</small></span>
                             </div>
-                            <h4>Twin Room</h4>
-                            <p>Cocok untuk keluarga atau teman. Dilengkapi dengan dua kasur single yang nyaman dan
-                                fasilitas lengkap.</p>
+                            <h4>Kamar Spesial (Special Room)</h4>
+                            <p>Keistimewaan kamar spesial ini adalah teras pribadi dengan tempat duduk kayu yang
+                                menghadap langsung ke panorama laut dan taman tropis. Kamar yang luas ini dilengkapi
+                                dengan 1 tempat tidur king-size berdesain interior kayu yang hangat, penyejuk AC, pintu
+                                kaca geser, serta kamar mandi pribadi dengan shower air hangat.</p>
                             <ul class="card-tags">
-                                <li>Air Conditioning</li>
-                                <li>Free Wi-Fi</li>
-                                <li>Ensuite Bathroom</li>
-                                <li>Sarapan Gratis</li>
+                                <li><i class="fas fa-snowflake"></i> Air Conditioning (AC)</li>
+                                <li><i class="fas fa-wifi"></i> Free Wi-Fi Cepat</li>
+                                <li><i class="fas fa-shower"></i> Ensuite Bathroom</li>
+                                <li><i class="fas fa-utensils"></i> Sarapan Buah Segar</li>
                             </ul>
-                            <button class="btn btn-card btn-open-modal" data-service="Twin Room">Pesan Kamar</button>
+                            <button class="btn btn-card btn-open-modal" data-service="Kamar Spesial">
+                                <i class="fas fa-calendar-check"></i> Pesan Kamar Spesial
+                            </button>
                         </div>
                     </article>
 
                     <article class="card-item">
                         <div class="card-img-wrap">
-                            <img class="card-photo" src="gambar/Double.jpg" alt="Double Room" loading="lazy" />
+                            <img class="card-photo" src="gambar/Double Room.jpg" alt="Kamar Ganda DESILA Beach House"
+                                loading="lazy" />
                         </div>
                         <div class="card-body">
                             <div class="card-head">
                                 <span class="card-no">NP&ndash;R2</span>
-                                <span class="card-price">450K IDR <small>/ malam</small></span>
+                                <span class="card-price">Rp 400.000 <small>/ per malam</small></span>
                             </div>
-                            <h4>Double Room</h4>
-                            <p>Sangat ideal untuk pasangan atau perorangan. Dilengkapi kasur double king-size dengan
-                                suasana tenang.</p>
+                            <h4>Kamar Ganda (Double Room)</h4>
+                            <p>Kenyamanan ekstra dengan akses langsung ke area kolam renang tepi pantai. Dilengkapi
+                                dengan fasilitas ketel listrik untuk teh dan kopi hangat, penyejuk AC, pintu masuk
+                                privat, serta teras santai dengan hembusan angin laut Nusa Penida yang menyejukkan.
+                                Sangat pas untuk pasangan atau sahabat.</p>
                             <ul class="card-tags">
-                                <li>Air Conditioning</li>
-                                <li>Free Wi-Fi</li>
-                                <li>Ensuite Bathroom</li>
-                                <li>Sarapan Gratis</li>
+                                <li><i class="fas fa-snowflake"></i> Air Conditioning (AC)</li>
+                                <li><i class="fas fa-water"></i> Akses Kolam Renang</li>
+                                <li><i class="fas fa-wifi"></i> Free Wi-Fi Cepat</li>
+                                <li><i class="fas fa-utensils"></i> Sarapan Tropis Gratis</li>
                             </ul>
-                            <button class="btn btn-card btn-open-modal" data-service="Double Room">Pesan Kamar</button>
+                            <button class="btn btn-card btn-open-modal" data-service="Kamar Ganda">
+                                <i class="fas fa-calendar-check"></i> Pesan Kamar Ganda
+                            </button>
                         </div>
                     </article>
                 </div>
@@ -150,52 +200,98 @@
             <div class="content-section" id="viewSection" style="display: none;" role="tabpanel">
                 <div class="grid-3">
                     <article class="ticket-card">
-                        <img class="ticket-photo" src="seaview/Balkon.jpg" alt="Balcony View 1" loading="lazy" />
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/Balkon Kamar.jpeg" alt="Balkon Kamar"
+                                loading="lazy" />
+                        </div>
                         <div class="ticket-body">
-                            <span class="ticket-no">VIEW 01</span>
+                            <span class="ticket-no">GALERI 01</span>
                             <h4>Balkon Kamar</h4>
-                            <p>Pemandangan indah langsung dari balkon</p>
+                            <p>Pemandangan laut biru langsung dari teras dan balkon pribadi villa.</p>
                         </div>
                     </article>
                     <article class="ticket-card">
-                        <img class="ticket-photo" src="seaview/Balkon2.jpg" alt="Balcony View 2" loading="lazy" />
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/makanan.jpg" alt="Sarapan Tropis" loading="lazy" />
+                        </div>
                         <div class="ticket-body">
-                            <span class="ticket-no">VIEW 02</span>
-                            <h4>Balkon Samping</h4>
-                            <p>Suasana santai menghadap laut</p>
+                            <span class="ticket-no">GALERI 02</span>
+                            <h4>Sarapan Buah Segar</h4>
+                            <p>Sajian buah-buahan tropis segar dan sarapan lezat setiap pagi untuk tamu.</p>
                         </div>
                     </article>
                     <article class="ticket-card">
-                        <img class="ticket-photo" src="seaview/Sunrise.jpg" alt="Sunrise View" loading="lazy" />
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/pemandangan.webp" alt="Sunrise Point"
+                                loading="lazy" />
+                        </div>
                         <div class="ticket-body">
-                            <span class="ticket-no">VIEW 03</span>
-                            <h4>Sunrise Point</h4>
-                            <p>Pemandangan matahari terbit di pagi hari</p>
+                            <span class="ticket-no">GALERI 03</span>
+                            <h4>Sunrise Point Memukau</h4>
+                            <p>Menyaksikan pesona matahari terbit di atas lautan Nusa Penida yang magis.</p>
                         </div>
                     </article>
                     <article class="ticket-card">
-                        <img class="ticket-photo" src="seaview/sea.jpeg" alt="Blue Ocean View" loading="lazy" />
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/Nature.jpeg" alt="Keasrian Alam" loading="lazy" />
+                        </div>
                         <div class="ticket-body">
-                            <span class="ticket-no">VIEW 04</span>
-                            <h4>Laut Biru</h4>
-                            <p>Air laut jernih khas Nusa Penida</p>
+                            <span class="ticket-no">GALERI 04</span>
+                            <h4>Keasrian Alam Tropis</h4>
+                            <p>Hamparan bukit hijau dan tebing megah yang mengelilingi pulau Nusa Penida.</p>
                         </div>
                     </article>
                     <article class="ticket-card">
-                        <img class="ticket-photo" src="seaview/views.jpeg" alt="Waterfront View" loading="lazy" />
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/kamar.jpg" alt="Interior Kamar" loading="lazy" />
+                        </div>
                         <div class="ticket-body">
-                            <span class="ticket-no">VIEW 05</span>
-                            <h4>Panorama Pesisir</h4>
-                            <p>Keindahan garis pantai Nusa Penida</p>
+                            <span class="ticket-no">GALERI 05</span>
+                            <h4>Interior Kamar Hangat</h4>
+                            <p>Sentuhan kayu alami yang nyaman, bersih, dan berpendingin udara sejuk.</p>
                         </div>
                     </article>
                     <article class="ticket-card">
-                        <img class="ticket-photo" src="seaview/Sunrise and ocean view villa.jpg"
-                            alt="Sunrise Ocean Villa" loading="lazy" />
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/Toilet.jpeg" alt="Kamar Mandi Pribadi"
+                                loading="lazy" />
+                        </div>
                         <div class="ticket-body">
-                            <span class="ticket-no">VIEW 06</span>
-                            <h4>Villa Sunrise</h4>
-                            <p>Sudut terbaik menikmati pemandangan laut</p>
+                            <span class="ticket-no">GALERI 06</span>
+                            <h4>Kamar Mandi Bersih</h4>
+                            <p>Kamar mandi pribadi modern dengan shower air segar dan perlengkapan mandi.</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/depan kamar.jpg" alt="Halaman Depan Kamar"
+                                loading="lazy" />
+                        </div>
+                        <div class="ticket-body">
+                            <span class="ticket-no">GALERI 07</span>
+                            <h4>Teras &amp; Halaman Villa</h4>
+                            <p>Area bersantai outdoor yang tenang diiringi suara deburan ombak pantai.</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/samping kamar kiri.jpg" alt="Suasana Tropis Samping"
+                                loading="lazy" />
+                        </div>
+                        <div class="ticket-body">
+                            <span class="ticket-no">GALERI 08</span>
+                            <h4>Taman Tropis Samping</h4>
+                            <p>Jalur setapak asri dengan pohon kelapa dan tanaman tropis khas Bali.</p>
+                        </div>
+                    </article>
+                    <article class="ticket-card">
+                        <div class="ticket-photo-wrap">
+                            <img class="ticket-photo" src="gambar/parkir.jpg" alt="Area Parkir Aman" loading="lazy" />
+                        </div>
+                        <div class="ticket-body">
+                            <span class="ticket-no">GALERI 09</span>
+                            <h4>Area Parkir Luas</h4>
+                            <p>Fasilitas parkir kendaraan mobil dan motor yang aman dan mudah diakses.</p>
                         </div>
                     </article>
                 </div>
@@ -203,50 +299,66 @@
         </div>
     </section>
 
-    <!-- ================= SNORKELING SECTION ================= -->
-    <section class="main-section" id="snorkeling">
+    <!-- ================= TENTANG KAMI SECTION ================= -->
+    <section class="main-section" id="tentang">
         <div class="wrap">
-            <div class="section-head text-center">
-                <p class="eyebrow">Underwater Experience</p>
-                <h2>Snorkeling</h2>
-                <p class="section-desc">Jelajahi keindahan bawah laut Nusa Penida dan berenang bersama Pari Manta serta
-                    terumbu karang alami.</p>
-            </div>
-            <div class="grid-2">
-                <article class="card-item">
-                    <div class="card-body">
-                        <h4>Paket Snorkeling Manta Bay</h4>
-                        <p class="feature-price">350K IDR / Orang</p>
-                        <p>Mengunjungi 4 titik populer: Manta Bay, Gamat Bay, Wall Point, dan Turtle Point. Sudah
-                            termasuk alat & foto underwater.</p>
-                        <ul class="card-tags">
-                            <li>Kapal Snorkeling</li>
-                            <li>Alat Snorkeling Lengkap</li>
-                            <li>Pemandu Profesional</li>
-                            <li>Foto/Video GoPro</li>
-                        </ul>
-                        <br>
-                        <button class="btn btn-card btn-open-modal" data-service="Snorkeling Manta Bay">Pesan Paket
-                            Snorkeling</button>
+            <div class="about-wrap">
+                <div class="about-text">
+                    <p class="eyebrow">PESONA &amp; KERAMAHAN BALI</p>
+                    <h2>Tentang Villa DESILA Beach House</h2>
+                    <p>
+                        Terletak tepat di pesisir Dusun Karangsari, Desa Suana, Nusa Penida, <strong>DESILA Beach
+                            House</strong> menghadirkan perpaduan sempurna antara ketenangan alam pantai tropis dan
+                        keramahan otentik khas Bali.
+                    </p>
+                    <p>
+                        Bangun setiap pagi dengan semburat fajar matahari terbit yang spektakuler, nikmati sarapan buah
+                        segar di balkon pribadi Anda, dan rasakan ketenangan sejati jauh dari hiruk-pikuk keramaian
+                        kota. Kami berkomitmen memberikan pengalaman liburan yang berkesan bagi setiap tamu dari seluruh
+                        penjuru dunia.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fas fa-water"></i></div>
+                            <div>
+                                <h5>Tepi Pantai Langsung</h5>
+                                <p>Akses cepat ke garis pantai dengan udara laut segar dan pemandangan Gunung Agung.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fas fa-swimming-pool"></i></div>
+                            <div>
+                                <h5>Kolam Renang Pantai</h5>
+                                <p>Berenang santai sambil menikmati panorama birunya lautan Nusa Penida.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fas fa-coffee"></i></div>
+                            <div>
+                                <h5>Sarapan Tropis Lezat</h5>
+                                <p>Sajian sarapan segar setiap pagi tanpa biaya tambahan untuk para tamu.</p>
+                            </div>
+                        </div>
+                        <div class="highlight-box">
+                            <div class="highlight-icon"><i class="fas fa-compass"></i></div>
+                            <div>
+                                <h5>Tur &amp; Snorkeling Lengkap</h5>
+                                <p>Bantuan lengkap penjemputan, tur keliling pulau, dan snorkeling bersama kapten lokal.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="card-item">
-                    <div class="card-body">
-                        <h4>Private Snorkeling Boat</h4>
-                        <p class="feature-price">1.200K IDR / Boat</p>
-                        <p>Layanan kapal pribadi tanpa digabung dengan tamu lain. Fleksibel menentukan waktu dan durasi
-                            snorkeling.</p>
-                        <ul class="card-tags">
-                            <li>Privat (Maks 6 Orang)</li>
-                            <li>Peralatan Premium</li>
-                            <li>Air Mineral</li>
-                            <li>Asuransi Perjalanan</li>
-                        </ul>
-                        <br>
-                        <button class="btn btn-card btn-open-modal" data-service="Private Snorkeling Boat">Pesan Boat
-                            Private</button>
+                </div>
+
+                <div class="about-image-stack">
+                    <img class="about-main-img" src="gambar/depan kamar.jpg" alt="Suasana Villa DESILA Beach House"
+                        loading="lazy" />
+                    <div class="about-badge">
+                        <span class="badge-number">4.9★</span>
+                        <span class="badge-text">Rating Tamu Terbaik<br><small style="color: var(--primary-color);">150+
+                                Ulasan Terverifikasi</small></span>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>
@@ -256,71 +368,124 @@
         <div class="wrap">
             <div class="section-head text-center">
                 <p class="eyebrow">Island Exploration</p>
-                <h2>Paket Wisata</h2>
-                <p class="section-desc">Nikmati kemudahan keliling destinasi eksotis Nusa Penida dengan transportasi
-                    ber-AC & driver lokal berpengalaman.</p>
+                <h2>Paket Wisata Nusa Penida</h2>
+                <p class="section-desc">Nikmati kenyamanan keliling destinasi paling ikonik di Nusa Penida bersama
+                    armada ber-AC dan driver lokal profesional yang ramah.</p>
             </div>
             <div class="grid-3">
                 <article class="card-item">
+                    <div class="card-img-wrap">
+                        <img class="card-photo" src="gambar/6.png" alt="Paket Tour Barat Nusa Penida" loading="lazy" />
+                    </div>
                     <div class="card-body">
-                        <h4>Tour Barat (West)</h4>
-                        <p class="feature-price">600K IDR / Mobil</p>
-                        <p>Mengunjungi Kelingking Beach, Broken Beach, Angel's Billabong, dan Crystal Bay.</p>
-                        <br>
-                        <button class="btn btn-card btn-open-modal" data-service="Tour Barat">Pesan Tour Barat</button>
+                        <h4>Tour Barat (West Trip)</h4>
+                        <p class="feature-price">Rp 600.000 <small>/ Mobil Privat (Maks 6 Orang)</small></p>
+                        <p>Kunjungi spot terpopuler dunia: Pantai Kelingking (T-Rex), Broken Beach (Pasih Uug), Angel's
+                            Billabong yang eksotis, dan berenang di Crystal Bay.</p>
+                        <ul class="card-tags">
+                            <li><i class="fas fa-car"></i> Mobil Ber-AC</li>
+                            <li><i class="fas fa-user-tie"></i> Driver &amp; Fotografer</li>
+                            <li><i class="fas fa-gas-pump"></i> BBM Termasuk</li>
+                        </ul>
+                        <button class="btn btn-card btn-open-modal" data-service="Tour Barat">
+                            <i class="fas fa-calendar-check"></i> Pesan Tour Barat
+                        </button>
                     </div>
                 </article>
+
                 <article class="card-item">
+                    <div class="card-img-wrap">
+                        <img class="card-photo" src="gambar/5.png" alt="Paket Tour Timur Nusa Penida" loading="lazy" />
+                    </div>
                     <div class="card-body">
-                        <h4>Tour Timur (East)</h4>
-                        <p class="feature-price">650K IDR / Mobil</p>
-                        <p>Mengunjungi Diamond Beach, Atuh Beach, Rumah Pohon Molenteng, dan Teletubbies Hill.</p>
-                        <br>
-                        <button class="btn btn-card btn-open-modal" data-service="Tour Timur">Pesan Tour Timur</button>
+                        <h4>Tour Timur (East Trip)</h4>
+                        <p class="feature-price">Rp 650.000 <small>/ Mobil Privat (Maks 6 Orang)</small></p>
+                        <p>Jelajahi keindahan tangga spektakuler Diamond Beach, Atuh Beach dengan pasir putihnya, Rumah
+                            Pohon Molenteng yang viral, dan perbukitan Teletubbies.</p>
+                        <ul class="card-tags">
+                            <li><i class="fas fa-car"></i> Mobil Ber-AC</li>
+                            <li><i class="fas fa-user-tie"></i> Driver &amp; Fotografer</li>
+                            <li><i class="fas fa-gas-pump"></i> BBM Termasuk</li>
+                        </ul>
+                        <button class="btn btn-card btn-open-modal" data-service="Tour Timur">
+                            <i class="fas fa-calendar-check"></i> Pesan Tour Timur
+                        </button>
                     </div>
                 </article>
+
                 <article class="card-item">
+                    <div class="card-img-wrap">
+                        <img class="card-photo" src="gambar/Nature.jpeg" alt="Paket Tour Kombinasi" loading="lazy" />
+                    </div>
                     <div class="card-body">
-                        <h4>Tour Kombinasi</h4>
-                        <p class="feature-price">800K IDR / Mobil</p>
-                        <p>Kombinasi destinasi hits bagian Barat & Timur dalam 1 hari penuh pengalaman seru.</p>
-                        <br>
-                        <button class="btn btn-card btn-open-modal" data-service="Tour Kombinasi">Pesan
-                            Kombinasi</button>
+                        <h4>Tour Kombinasi (West &amp; East)</h4>
+                        <p class="feature-price">Rp 800.000 <small>/ Mobil Privat (Maks 6 Orang)</small></p>
+                        <p>Paket terlengkap untuk memaksimalkan liburan Anda! Gabungkan destinasi unggulan terbaik dari
+                            sisi Barat dan Timur dalam 1 hari penuh petualangan berharga.</p>
+                        <ul class="card-tags">
+                            <li><i class="fas fa-car"></i> Mobil Ber-AC</li>
+                            <li><i class="fas fa-user-tie"></i> Driver Profesional</li>
+                            <li><i class="fas fa-clock"></i> Full Day Trip</li>
+                        </ul>
+                        <button class="btn btn-card btn-open-modal" data-service="Tour Kombinasi">
+                            <i class="fas fa-calendar-check"></i> Pesan Tour Kombinasi
+                        </button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <!-- ================= TREKKING SECTION ================= -->
-    <section class="main-section" id="trekking">
+    <!-- ================= SNORKELING SECTION ================= -->
+    <section class="main-section" id="snorkeling">
         <div class="wrap">
             <div class="section-head text-center">
-                <p class="eyebrow">Adventure & Hiking</p>
-                <h2>Trekking</h2>
-                <p class="section-desc">Tantang diri Anda menjelajahi tebing raksasa dan pantai tersembunyi dengan
-                    pemandangan spektakuler.</p>
+                <p class="eyebrow">Underwater Experience</p>
+                <h2>Snorkeling Bawah Laut</h2>
+                <p class="section-desc">Berenang bersama Pari Manta raksasa, penyu laut liar, dan saksikan
+                    keanekaragaman terumbu karang tropis yang mempesona di Nusa Penida.</p>
             </div>
             <div class="grid-2">
                 <article class="card-item">
+                    <div class="card-img-wrap">
+                        <img class="card-photo" src="gambar/2.png" alt="Paket Snorkeling Manta Bay" loading="lazy" />
+                    </div>
                     <div class="card-body">
-                        <h4>Trekking Kelingking Cliff</h4>
-                        <p class="feature-price">250K IDR / Pemandu</p>
-                        <p>Petualangan menuruni tebing ikonik Kelingking Beach hingga tiba di pasir putih yang indah
-                            didampingi pemandu lokal berpengalaman.</p>
-                        <button class="btn btn-card btn-open-modal" data-service="Trekking Kelingking">Pesan
-                            Trekking</button>
+                        <h4>Paket Snorkeling Manta Bay (Sharing)</h4>
+                        <p class="feature-price">Rp 350.000 <small>/ Orang</small></p>
+                        <p>Eksplorasi 4 spot terindah bawah laut: Manta Bay, Gamat Bay, Wall Point, dan Turtle Point.
+                            Sudah lengkap dengan peralatan berstandar internasional dan dokumentasi foto/video bawah
+                            air.</p>
+                        <ul class="card-tags">
+                            <li><i class="fas fa-ship"></i> Kapal Snorkeling</li>
+                            <li><i class="fas fa-mask"></i> Alat Masker &amp; Fin</li>
+                            <li><i class="fas fa-camera"></i> Foto &amp; Video GoPro</li>
+                            <li><i class="fas fa-life-ring"></i> Pemandu / Guide</li>
+                        </ul>
+                        <button class="btn btn-card btn-open-modal" data-service="Snorkeling Manta Bay">
+                            <i class="fas fa-calendar-check"></i> Pesan Paket Snorkeling
+                        </button>
                     </div>
                 </article>
+
                 <article class="card-item">
+                    <div class="card-img-wrap">
+                        <img class="card-photo" src="gambar/3.png" alt="Private Snorkeling Boat" loading="lazy" />
+                    </div>
                     <div class="card-body">
-                        <h4>Trekking Peguyangan Waterfall</h4>
-                        <p class="feature-price">300K IDR / Pemandu</p>
-                        <p>Menelusuri ratusan anak tangga biru menempel di tebing curam menuju mata air alami dan
-                            pemandangan samudera lepas.</p>
-                        <button class="btn btn-card btn-open-modal" data-service="Trekking Peguyangan">Pesan
-                            Trekking</button>
+                        <h4>Private Snorkeling Boat (Kapal Pribadi)</h4>
+                        <p class="feature-price">Rp 1.200.000 <small>/ Perahu Privat (Maks 6 Orang)</small></p>
+                        <p>Eksklusif tanpa tamu lain! Bebas mengatur jam keberangkatan dan durasi snorkeling di setiap
+                            spot. Sangat nyaman untuk keluarga, pasangan romantis, maupun rombongan kawan dekat.</p>
+                        <ul class="card-tags">
+                            <li><i class="fas fa-crown"></i> Kapal Khusus Privat</li>
+                            <li><i class="fas fa-mask"></i> Peralatan Premium</li>
+                            <li><i class="fas fa-tint"></i> Air Mineral Gratis</li>
+                            <li><i class="fas fa-shield-alt"></i> Asuransi Perjalanan</li>
+                        </ul>
+                        <button class="btn btn-card btn-open-modal" data-service="Private Snorkeling Boat">
+                            <i class="fas fa-calendar-check"></i> Pesan Boat Private
+                        </button>
                     </div>
                 </article>
             </div>
@@ -331,21 +496,191 @@
     <section class="main-section" id="jukung">
         <div class="wrap">
             <div class="section-head text-center">
-                <p class="eyebrow">Traditional Fishing</p>
-                <h2>Memancing di Jukung</h2>
-                <p class="section-desc">Merasakan sensasi memancing tradisional Bali menggunakan perahu kayu Jukung khas
-                    nelayan Nusa Penida.</p>
+                <p class="eyebrow">Traditional Fishing Adventure</p>
+                <h2>Memancing di Perahu Jukung</h2>
+                <p class="section-desc">Rasakan pengalaman autentik melaut bersama kapten nelayan lokal menggunakan
+                    perahu tradisional kayu Jukung khas Nusa Penida.</p>
             </div>
-            <div class="grid-1 text-center">
-                <article class="card-item" style="max-width: 650px; margin: 0 auto;">
+            <div class="grid-2 text-center">
+                <!-- CARD PERTAMA -->
+                <article class="card-item">
+                    <div class="card-img-wrap" style="height: 320px;">
+                        <img class="card-photo" src="gambar/4.png" alt="Memancing Tradisional Jukung di Nusa Penida"
+                            loading="lazy" />
+                    </div>
                     <div class="card-body">
-                        <h4>Paket Memancing Tradisional Jukung</h4>
-                        <p class="feature-price">500K IDR / 3 Jam</p>
-                        <p>Pengalaman memancing santai di perairan jernih bersama kapten lokal. Termasuk peralatan
-                            pancing tradisional, umpan, dan hasil tangkapan bisa dibawa pulang atau dibakar!</p>
-                        <br>
-                        <button class="btn btn-card btn-open-modal" data-service="Memancing Jukung">Pesan Paket
-                            Memancing</button>
+                        <h4>Paket Memancing Tradisional Jukung Bali</h4>
+                        <p class="feature-price">Rp 1.500.000 <small>/ Perahu (Durasi 6 Jam)</small></p>
+                        <p>Menyusuri perairan jernih Nusa Penida di pagi hari atau menjelang sore. Termasuk peralatan
+                            pancing tradisional, umpan segar, dan hasil ikan tangkapan bisa Anda bawa pulang langsung
+                            untuk dibakar lezat di tepi pantai!</p>
+                        <ul class="card-tags" style="justify-content: center;">
+                            <li><i class="fas fa-fish"></i> Alat Pancing Lengkap</li>
+                            <li><i class="fas fa-anchor"></i> Kapten Lokal Berpengalaman</li>
+                            <li><i class="fas fa-clock"></i> Durasi 6 Jam Melaut</li>
+                            <li><i class="fas fa-fire"></i> Ikan Tangkapan Milik Tamu</li>
+                        </ul>
+                        <button class="btn btn-card btn-open-modal" data-service="Memancing Jukung"
+                            style="max-width: 320px; margin: 15px auto 0 auto;">
+                            <i class="fas fa-calendar-check"></i> Pesan Paket Memancing
+                        </button>
+                    </div>
+                </article>
+
+                <!-- CARD KEDUA (DUPLIKASI) -->
+                <article class="card-item">
+                    <div class="card-img-wrap" style="height: 320px;">
+                        <img class="card-photo" src="gambar/4.png" alt="Memancing Tradisional Jukung di Nusa Penida"
+                            loading="lazy" />
+                    </div>
+                    <div class="card-body">
+                        <h4>Paket Memancing Tradisional Jukung Bali</h4>
+                        <p class="feature-price">Rp 1.500.000 <small>/ Perahu (Durasi 6 Jam)</small></p>
+                        <p>Menyusuri perairan jernih Nusa Penida di pagi hari atau menjelang sore. Termasuk peralatan
+                            pancing tradisional, umpan segar, dan hasil ikan tangkapan bisa Anda bawa pulang langsung
+                            untuk dibakar lezat di tepi pantai!</p>
+                        <ul class="card-tags" style="justify-content: center;">
+                            <li><i class="fas fa-fish"></i> Alat Pancing Lengkap</li>
+                            <li><i class="fas fa-anchor"></i> Kapten Lokal Berpengalaman</li>
+                            <li><i class="fas fa-clock"></i> Durasi 6 Jam Melaut</li>
+                            <li><i class="fas fa-fire"></i> Ikan Tangkapan Milik Tamu</li>
+                        </ul>
+                        <button class="btn btn-card btn-open-modal" data-service="Memancing Jukung"
+                            style="max-width: 320px; margin: 15px auto 0 auto;">
+                            <i class="fas fa-calendar-check"></i> Pesan Paket Memancing
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ULASAN TAMU SECTION ================= -->
+    <section class="main-section" id="ulasan">
+        <div class="wrap">
+            <div class="section-head text-center">
+                <p class="eyebrow">TESTIMONI &amp; KEPUASAN TAMU</p>
+                <h2>Ulasan Tamu Villa DESILA</h2>
+                <p class="section-desc">Kepercayaan dan kebahagiaan para tamu dari seluruh dunia adalah kebanggaan
+                    terbesar kami.</p>
+            </div>
+
+            <!-- Score Summary Banner -->
+            <div class="reviews-summary">
+                <div class="rating-score-box">
+                    <span class="big-rating">4.9</span>
+                    <div>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating-count">Luar Biasa &bull; Berdasarkan 150+ Ulasan</span>
+                    </div>
+                </div>
+                <div class="rating-platform-badges">
+                    <span class="platform-badge"><i class="fab fa-google"></i> Google Reviews <strong>4.9 /
+                            5.0</strong></span>
+                    <span class="platform-badge"><i class="fas fa-bed"></i> Booking.com <strong>9.3 / 10</strong></span>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid-4">
+                <article class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div class="guest-avatar">LE</div>
+                            <div class="guest-info">
+                                <h5>Liam &amp; Emma</h5>
+                                <span class="guest-country">🇦🇺 Australia &bull; Pasangan</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Tempat paling damai di Nusa Penida! Kamarnya sangat bersih, teras
+                            menghadap langsung ke laut dan staf sangat ramah membantu kami mengatur tur snorkeling
+                            manta. Sangat berkesan!"</p>
+                    </div>
+                    <div class="review-source">
+                        <span>Menginap 3 Malam</span>
+                        <span class="verified-tag"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div class="guest-avatar"
+                                style="background: linear-gradient(135deg, #0284c7, #38bdf8); color:#fff;">SL</div>
+                            <div class="guest-info">
+                                <h5>Sophie Laurent</h5>
+                                <span class="guest-country">🇫🇷 Prancis &bull; Solo Traveler</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Pemandangan matahari terbit dari balkon sangat magis! Sarapan buah
+                            segarnya lezat dan kolam renang tepian pantainya luar biasa. Suasananya tenang sekali, pasti
+                            saya rekomendasikan!"</p>
+                    </div>
+                    <div class="review-source">
+                        <span>Menginap 2 Malam</span>
+                        <span class="verified-tag"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div class="guest-avatar"
+                                style="background: linear-gradient(135deg, #10b981, #34d399); color:#fff;">BS</div>
+                            <div class="guest-info">
+                                <h5>Budi Santoso</h5>
+                                <span class="guest-country">🇮🇩 Indonesia &bull; Keluarga</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Pelayanan staf ramah sekali seperti keluarga sendiri. Kamar luas, AC
+                            dingin, dan anak-anak sangat senang bermain di kolam renang depan laut. Tur baratnya juga
+                            sangat puas!"</p>
+                    </div>
+                    <div class="review-source">
+                        <span>Menginap 4 Malam</span>
+                        <span class="verified-tag"><i class="fas fa-check-circle"></i> Terverifikasi</span>
+                    </div>
+                </article>
+
+                <article class="review-card">
+                    <div>
+                        <div class="review-header">
+                            <div class="guest-avatar"
+                                style="background: linear-gradient(135deg, #f59e0b, #fbbf24); color:#fff;">MS</div>
+                            <div class="guest-info">
+                                <h5>Markus Schneider</h5>
+                                <span class="guest-country">🇩🇪 Jerman &bull; Wisatawan</span>
+                            </div>
+                        </div>
+                        <div class="review-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"Layanan private boat snorkeling dan memancing jukungnya luar biasa seru.
+                            Kapten dan driver sangat tepat waktu dan profesional. Menginap di DESILA adalah keputusan
+                            terbaik kami di Bali!"</p>
+                    </div>
+                    <div class="review-source">
+                        <span>Menginap 3 Malam</span>
+                        <span class="verified-tag"><i class="fas fa-check-circle"></i> Terverifikasi</span>
                     </div>
                 </article>
             </div>
@@ -357,9 +692,9 @@
         <div class="wrap">
             <div class="section-head text-center">
                 <p class="eyebrow">Hubungi Kami</p>
-                <h2>Hubungi Kami</h2>
-                <p class="section-desc">Ada pertanyaan atau butuh bantuan rencana liburan Anda? Hubungi kami langsung
-                    melalui WhatsApp atau Email.</p>
+                <h2>Informasi Kontak &amp; Lokasi</h2>
+                <p class="section-desc">Ada pertanyaan seputar akomodasi atau ingin merancang rencana liburan Anda di
+                    Nusa Penida? Hubungi tim kami langsung via WhatsApp atau Email.</p>
             </div>
 
             <!-- Container Kartu Kontak -->
@@ -371,22 +706,85 @@
                     </div>
                     <h4>WhatsApp / Telepon</h4>
                     <p>+62 823-4051-0917</p>
-                    <!-- Kartu 2: instagram -->
-                    <a href="https://instagram.com/bintangnusapenidatour" target="_blank" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <h4>Instagram</h4>
-                        <p>@bintangnusapenidatour</p>
-                    </a>
-                    <a href="https://www.google.com/maps/place/DESILA+Beach+House/@-8.7071695,115.5831859,861m/data=!3m2!1e3!4b1!4m9!3m8!1s0x2dd2776fafc3a6c9:0x72d55684cdd29784!5m2!4m1!1i2!8m2!3d-8.7071695!4d115.5857608!16s%2Fg%2F11fks6jbwq?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank" class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <h4>Lokasi</h4>
-                        <p>Dusun Karangsari, Desa Suana, Nusa Penida, Klungkung, Bali, Indonesia</p>
-                    </a>
+                </a>
+
+                <!-- Kartu 2: Email -->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=desilabeachrooms@gmail.com" target="_blank"
+                    class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4>Email Resmi</h4>
+                    <p>desilabeachrooms@gmail.com</p>
+                </a>
+
+                <!-- Kartu 3: Instagram -->
+                <a href="https://www.instagram.com/desilabeachhouse" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h4>Instagram</h4>
+                    <p>@desilabeachhouse</p>
+                </a>
+
+                <!-- Kartu 4: Facebook -->
+                <a href="https://www.facebook.com/desilabeachhouse19" target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <h4>Facebook</h4>
+                    <p>desilabeachhouse19</p>
+                </a>
+
+                <!-- Kartu 5: TikTok -->
+                <a href="https://www.tiktok.com/@desilabeachhouse_?is_from_webapp=1&sender_device=pc" target="_blank"
+                    class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </div>
+                    <h4>TikTok</h4>
+                    <p>@desilabeachhouse_</p>
+                </a>
+
+                <!-- Kartu 6: Booking.com -->
+                <a href="https://www.booking.com/hotel/id/desila-beach-house.html" target="_blank"
+                    rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h4>Booking.com</h4>
+                    <p>DESILA Beach House</p>
+                </a>
+
+                <!-- Kartu 7: Traveloka -->
+                <a href="https://www.traveloka.com/id-id/hotel/detail?spec=09-09-2026.10-09-2026.1.1.HOTEL.9000000005742.Desila%20Beach%20House.2"
+                    target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h4>Traveloka.com</h4>
+                    <p>DESILA Beach House</p>
+                </a>
+
+                <!-- Kartu 8: Agoda -->
+                <a href="https://www.agoda.com/desila-beach-house/hotel/bali-id.html" target="_blank"
+                    rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>Agoda.com</h4>
+                    <p>DESILA Beach House</p>
+                </a>
+
+                <!-- Kartu 9: Lokasi Google Maps -->
+                <a href="https://www.google.com/maps/place/DESILA+Beach+House/@-8.7071695,115.5831859,861m/data=!3m2!1e3!4b1!4m9!3m8!1s0x2dd2776fafc3a6c9:0x72d55684cdd29784!5m2!4m1!1i2!8m2!3d-8.7071695!4d115.5857608"
+                    target="_blank" class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h4>Lokasi Villa di Maps</h4>
+                    <p>Dusun Karangsari, Desa Suana, Nusa Penida, Bali</p>
+                </a>
             </div>
         </div>
     </section>
@@ -396,20 +794,20 @@
         <div class="wrap footer-container">
             <!-- Kolom Brand & Alamat -->
             <div class="footer-brand">
-                <a href="#top" class="brand logo">
-                    <img class="brand-mark" src="logo/Logo Website.png" alt="DESILA Penida logo" width="36"
-                        height="36" />
-                    DESILA<span>penida</span>
+                <a href="#top" class="brand logo notranslate">
+                    <img class="brand-mark" src="logo/Logo.png" alt="DESILA Beach House logo" width="50" height="50" />
+                    <span class="brand-text">DESILA<span>Beach House</span></span>
                 </a>
                 <p class="footer-address">
-                    <i class="fas fa-map-marker-alt"></i> Dusun Karangsari, Desa Suana, Nusa Penida, Klungkung, Bali,
-                    Indonesia
+                    <strong>Ada pertanyaan sebelum berlibur? </strong>Hubungi tim kami melalui WhatsApp untuk respon
+                    cepat atau ikuti media sosial kami untuk informasi destinasi terbaik di Pulau Nusa Penida bersama
+                    <strong>Rumah Pantai Villa DESILA.</strong>
                 </p>
             </div>
 
             <!-- Kolom Sosial Media & Kontak -->
             <div class="footer-social">
-                <h4>Ikuti & Hubungi Kami</h4>
+                <h4>Ikuti &amp; Terhubung Bersama Kami</h4>
                 <div class="social-links">
                     <a href="https://wa.me/6282340510917" target="_blank" aria-label="WhatsApp" class="social-icon wa">
                         <i class="fab fa-whatsapp"></i>
@@ -422,78 +820,401 @@
                         class="social-icon fb">
                         <i class="fab fa-facebook-f"></i>
                     </a>
+                    <a href="https://www.tiktok.com/@desilabeachhouse_?is_from_webapp=1&sender_device=pc"
+                        target="_blank" aria-label="TikTok" class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
                 </div>
-                <p class="handle-text">@desilabeachhouse</p>
+                <p class="handle-text">@desilabeachhouse &bull; Nusa Penida, Bali</p>
             </div>
         </div>
 
         <div class="footer-bottom">
             <div class="wrap">
-                <p>&copy; 2026 DESILA Penida. All Rights Reserved.</p>
+                <p>&copy; 2026 Villa DESILA Beach House &bull; Nusa Penida, Bali. Hak Cipta Dilindungi Undang-Undang.
+                </p>
             </div>
         </div>
     </footer>
 
-    <!-- ================= MODAL FORM PEMESANAN ================= -->
+    <!-- =========================================================
+         MODAL 1: FORMULIR PEMESANAN ONLINE (HARGA OTOMATIS)
+         ========================================================= -->
     <div class="modal-overlay" id="bookingModal">
         <div class="modal-content">
-            <button type="button" class="modal-close" id="closeModal" aria-label="Tutup Modal">&times;</button>
+            <button type="button" class="modal-close" id="closeModal" aria-label="Tutup Formulir">&times;</button>
             <div class="modal-header">
-                <h3>Form Pemesanan</h3>
-                <p>Isi formulir di bawah ini untuk melakukan pemesanan langsung via WhatsApp.</p>
+                <h3>FORMULIR PEMESANAN ONLINE</h3>
+                <p>Harga dan perkiraan total biaya akan <strong>otomatis terhitung secara langsung</strong> sesuai
+                    pilihan kamar atau paket wisata Anda.</p>
             </div>
-            <form id="bookingForm" class="booking-form">
-                <div class="form-group">
-                    <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" required placeholder="Contoh: Budi Santoso" />
-                </div>
 
-                <div class="form-group">
-                    <label for="phone">Nomor WhatsApp</label>
-                    <input type="tel" id="phone" required placeholder="Contoh: +6282340510917" />
+            <!-- Modal Type Selector -->
+            <div id="modalTypeSelector" style="text-align: center; margin-bottom: 22px; display: none;">
+                <p style="margin-bottom: 12px; font-weight: 500;">Silakan tentukan jenis reservasi:</p>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <button type="button" class="btn btn-primary" id="btnSelectRoom" style="padding: 12px 22px;">
+                        <i class="fas fa-bed"></i> Kamar Villa DESILA
+                    </button>
+                    <button type="button" class="btn btn-hero-secondary" id="btnSelectActivity"
+                        style="padding: 12px 22px;">
+                        <i class="fas fa-compass"></i> Paket Wisata &amp; Aktivitas
+                    </button>
                 </div>
+            </div>
 
+            <!-- FORM KAMAR -->
+            <form id="formKamar" class="booking-form" style="display: none;">
                 <div class="form-group">
-                    <label for="service">Layanan / Paket yang Dipilih</label>
-                    <select id="service" required>
-                        <option value="Twin Room">Kamar - Twin Room</option>
-                        <option value="Double Room">Kamar - Double Room</option>
-                        <option value="Snorkeling Manta Bay">Snorkeling Manta Bay</option>
-                        <option value="Private Snorkeling Boat">Private Snorkeling Boat</option>
-                        <option value="Tour Barat">Tour Paket Barat</option>
-                        <option value="Tour Timur">Tour Paket Timur</option>
-                        <option value="Tour Kombinasi">Tour Kombinasi</option>
-                        <option value="Trekking Kelingking">Trekking Kelingking Cliff</option>
-                        <option value="Trekking Peguyangan">Trekking Peguyangan Waterfall</option>
-                        <option value="Memancing Jukung">Memancing di Jukung</option>
+                    <label for="name_kamar"><i class="fas fa-user"></i> Nama Lengkap Pemesan</label>
+                    <input type="text" id="name_kamar" required placeholder="Contoh: Sarah Jenkins / Budi Santoso" />
+                </div>
+                <div class="form-group">
+                    <label for="phone_kamar"><i class="fab fa-whatsapp"></i> Nomor WhatsApp Aktif</label>
+                    <input type="tel" id="phone_kamar" required
+                        placeholder="Contoh: +62 823-4051-0917 atau +61 400..." />
+                </div>
+                <div class="form-group">
+                    <label for="service_kamar"><i class="fas fa-door-open"></i> Pilihan Tipe Kamar</label>
+                    <select id="service_kamar" required>
+                        <option value="Kamar Spesial">Kamar Spesial — Rp 400.000 / malam</option>
+                        <option value="Kamar Ganda">Kamar Ganda — Rp 400.000 / malam</option>
                     </select>
                 </div>
-
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="date">Tanggal Kegiatan/Check-in</label>
-                        <input type="date" id="date" required />
+                        <label for="checkin_date"><i class="fas fa-calendar-alt"></i> Tanggal Check-In</label>
+                        <input type="date" id="checkin_date" required />
                     </div>
                     <div class="form-group">
-                        <label for="guests">Jumlah Orang</label>
-                        <input type="number" id="guests" min="1" value="2" required />
+                        <label for="checkout_date"><i class="fas fa-calendar-check"></i> Tanggal Check-Out</label>
+                        <input type="date" id="checkout_date" required />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="jumlah_kamar"><i class="fas fa-bed"></i> Jumlah Kamar</label>
+                        <input type="number" id="jumlah_kamar" min="1" max="10" value="1" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guests_kamar"><i class="fas fa-users"></i> Jumlah Orang (Tamu)</label>
+                        <input type="number" id="guests_kamar" min="1" max="25" value="2" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes_kamar"><i class="fas fa-comment-dots"></i> Catatan Tambahan (Opsional)</label>
+                    <textarea id="notes_kamar" rows="2"
+                        placeholder="Contoh: Minta penjemputan di Pelabuhan Buyuk"></textarea>
+                </div>
+
+                <!-- LIVE PRICE BREAKDOWN -->
+                <div class="price-breakdown-box">
+                    <div class="price-breakdown-row">
+                        <span>Tarif Kamar per Malam:</span>
+                        <strong id="kamar_rate_info">Rp 400.000</strong>
+                    </div>
+                    <div class="price-breakdown-row">
+                        <span>Durasi Menginap:</span>
+                        <strong id="kamar_nights_info">1 Malam</strong>
+                    </div>
+                    <div class="price-breakdown-row">
+                        <span>Total Unit Kamar:</span>
+                        <strong id="kamar_count_info">1 Kamar</strong>
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="notes">Catatan Tambahan (Opsional)</label>
-                    <textarea id="notes" rows="3"
-                        placeholder="Contoh: Butuh penjemputan di Pelabuhan Sampalan"></textarea>
+                <!-- TOTAL BADGE OTOMATIS -->
+                <div class="total-highlight-badge">
+                    <span class="total-label">TOTAL ESTIMASI BIAYA:</span>
+                    <span class="total-amount" id="total_kamar">Rp 400.000</span>
                 </div>
 
-                <button type="submit" class="btn btn-primary btn-submit">Kirim Pemesanan via WhatsApp</button>
+                <!-- SUBMIT ACTIONS -->
+                <button type="submit" class="btn btn-submit">
+                    <i class="fab fa-whatsapp" style="font-size: 1.25rem;"></i> Kirim Pemesanan &amp; Dapatkan Bukti
+                    Booking
+                </button>
+            </form>
+
+            <!-- FORM AKTIVITAS -->
+            <form id="formAktivitas" class="booking-form" style="display: none;">
+                <div class="form-group">
+                    <label for="name_aktivitas"><i class="fas fa-user"></i> Nama Lengkap Pemesan</label>
+                    <input type="text" id="name_aktivitas" required placeholder="Contoh: David Miller / Rina Wijaya" />
+                </div>
+                <div class="form-group">
+                    <label for="phone_aktivitas"><i class="fab fa-whatsapp"></i> Nomor WhatsApp Aktif</label>
+                    <input type="tel" id="phone_aktivitas" required
+                        placeholder="Contoh: +62 823-4051-0917 atau +44 791..." />
+                </div>
+                <div class="form-group">
+                    <label for="service_aktivitas"><i class="fas fa-map-marked-alt"></i> Pilihan Paket /
+                        Aktivitas</label>
+                    <select id="service_aktivitas" required>
+                        <option value="Snorkeling Manta Bay">Snorkeling Manta Bay (Sharing) — Rp 350.000 / orang
+                        </option>
+                        <option value="Private Snorkeling Boat">Private Snorkeling Boat — Rp 1.200.000 / perahu</option>
+                        <option value="Tour Barat">Tour Barat (West Trip) — Rp 600.000 / mobil</option>
+                        <option value="Tour Timur">Tour Timur (East Trip) — Rp 650.000 / mobil</option>
+                        <option value="Tour Kombinasi">Tour Kombinasi (West &amp; East) — Rp 800.000 / mobil</option>
+                        <option value="Memancing Jukung">Memancing Tradisional Jukung — Rp 1.500.000 / perahu</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tanggal_aktivitas"><i class="fas fa-calendar-day"></i> Tanggal Aktivitas</label>
+                        <input type="date" id="tanggal_aktivitas" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="guests_aktivitas" id="label_guests_aktivitas"><i class="fas fa-users"></i> Jumlah
+                            Orang / Pax</label>
+                        <input type="number" id="guests_aktivitas" min="1" max="25" value="2" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="notes_aktivitas"><i class="fas fa-comment-dots"></i> Catatan Khusus (Opsional)</label>
+                    <textarea id="notes_aktivitas" rows="2"
+                        placeholder="Contoh: Jam jemput jam 08.00 pagi di hotel"></textarea>
+                </div>
+
+                <!-- LIVE PRICE BREAKDOWN -->
+                <div class="price-breakdown-box">
+                    <div class="price-breakdown-row">
+                        <span>Tarif Paket / Unit:</span>
+                        <strong id="aktivitas_rate_info">Rp 350.000</strong>
+                    </div>
+                    <div class="price-breakdown-row">
+                        <span>Skema Perhitungan:</span>
+                        <strong id="aktivitas_calc_scheme">2 Orang &times; Rp 350.000</strong>
+                    </div>
+                </div>
+
+                <!-- TOTAL BADGE OTOMATIS -->
+                <div class="total-highlight-badge">
+                    <span class="total-label">TOTAL ESTIMASI BIAYA:</span>
+                    <span class="total-amount" id="total_aktivitas">Rp 700.000</span>
+                </div>
+
+                <!-- SUBMIT ACTIONS -->
+                <button type="submit" class="btn btn-submit">
+                    <i class="fab fa-whatsapp" style="font-size: 1.25rem;"></i> Kirim Pemesanan &amp; Dapatkan Bukti
+                    Booking
+                </button>
             </form>
         </div>
     </div>
 
-    <!-- SCRIPT INTERAKTIF -->
+    <!-- =========================================================
+         MODAL 2: BUKTI RESERVASI & PEMBAYARAN RESMI (E-VOUCHER)
+         ========================================================= -->
+    <div class="modal-overlay" id="voucherModal">
+        <div class="voucher-content">
+            <button type="button" class="modal-close" id="closeVoucherModal"
+                aria-label="Tutup Bukti Reservasi">&times;</button>
+
+            <div class="voucher-card" id="printableVoucher">
+                <!-- Header Tiket Resmi -->
+                <div class="voucher-header">
+                    <div class="voucher-logo-area">
+                        <img src="logo/Logo.png" alt="Logo DESILA" width="48" height="48" />
+                        <div class="voucher-brand-title">
+                            DESILA Beach House
+                            <span>BUKTI RESERVASI RESMI &bull; OFFICIAL E-VOUCHER</span>
+                        </div>
+                    </div>
+                    <div class="voucher-status-badge">
+                        <i class="fas fa-check-circle"></i> TERCATAT RESMI
+                    </div>
+                </div>
+
+                <!-- Meta Row (Kode & Waktu) -->
+                <div class="voucher-meta-row">
+                    <div>
+                        <span style="color:#64748b; font-size:0.75rem;">NO. KODE BOOKING:</span><br>
+                        <strong id="v_kode"
+                            style="color:#0284c7; font-size:1.05rem; letter-spacing:1px;">DSL-NP-0000</strong>
+                    </div>
+                    <div style="text-align: right;">
+                        <span style="color:#64748b; font-size:0.75rem;">WAKTU PEMESANAN:</span><br>
+                        <strong id="v_waktu">12 Oktober 2026, 22:00 WITA</strong>
+                    </div>
+                </div>
+
+                <!-- Data Tamu & Layanan -->
+                <div class="voucher-details-grid">
+                    <div>
+                        <span class="voucher-item-label">Nama Tamu</span>
+                        <div class="voucher-item-val" id="v_nama">-</div>
+                    </div>
+                    <div>
+                        <span class="voucher-item-label">Nomor WhatsApp</span>
+                        <div class="voucher-item-val" id="v_phone">-</div>
+                    </div>
+                    <div>
+                        <span class="voucher-item-label">Layanan / Tipe Kamar</span>
+                        <div class="voucher-item-val" id="v_layanan">-</div>
+                    </div>
+                    <div>
+                        <span class="voucher-item-label">Jadwal Tanggal</span>
+                        <div class="voucher-item-val" id="v_tanggal">-</div>
+                    </div>
+                    <div>
+                        <span class="voucher-item-label">Kapasitas / Durasi</span>
+                        <div class="voucher-item-val" id="v_durasi">-</div>
+                    </div>
+                    <div>
+                        <span class="voucher-item-label">Catatan Tambahan</span>
+                        <div class="voucher-item-val" id="v_catatan">-</div>
+                    </div>
+                </div>
+
+                <!-- Total Strip -->
+                <div class="voucher-total-strip">
+                    <span>TOTAL PEMBAYARAN:</span>
+                    <strong id="v_total">Rp 0</strong>
+                </div>
+
+                <!-- Instruksi Pembayaran Transfer Bank Resmi -->
+                <div class="voucher-bank-box">
+                    <div class="voucher-bank-title">
+                        <i class="fas fa-university" style="color: #0284c7;"></i> Rekening Resmi Transfer Bank Villa
+                        DESILA:
+                    </div>
+                    <div class="bank-row">
+                        <div>
+                            <span class="bank-name">Bank BCA:</span>
+                            <span class="bank-acc" id="acc_bca">8234-0510-917</span>
+                            <span style="font-size:0.75rem; color:#64748b;">(a.n. DESILA Beach House)</span>
+                        </div>
+                        <button type="button" class="btn-copy-acc" onclick="copyToClipboard('acc_bca', this)">Salin No.
+                            Rek</button>
+                    </div>
+                    <div class="bank-row">
+                        <div>
+                            <span class="bank-name">Bank BRI:</span>
+                            <span class="bank-acc" id="acc_bri">4672-01-019283-53-1</span>
+                            <span style="font-size:0.75rem; color:#64748b;">(a.n. DESILA Beach House)</span>
+                        </div>
+                        <button type="button" class="btn-copy-acc" onclick="copyToClipboard('acc_bri', this)">Salin No.
+                            Rek</button>
+                    </div>
+                    <div class="bank-row">
+                        <div>
+                            <span class="bank-name">Bank Mandiri:</span>
+                            <span class="bank-acc" id="acc_mandiri">145-00-1829304-2</span>
+                            <span style="font-size:0.75rem; color:#64748b;">(a.n. DESILA Beach House)</span>
+                        </div>
+                        <button type="button" class="btn-copy-acc" onclick="copyToClipboard('acc_mandiri', this)">Salin
+                            No. Rek</button>
+                    </div>
+                </div>
+
+                <!-- Notice penting untuk kedatangan di Villa -->
+                <div class="voucher-note">
+                    <i class="fas fa-info-circle" style="color: #d97706; margin-right: 4px;"></i>
+                    <strong>PENTING:</strong> Simpan atau cetak bukti booking ini. Tunjukkan dokumen ini atau nomor
+                    WhatsApp Anda kepada staf resepsionis saat Anda tiba di lokasi Villa DESILA Beach House (Nusa
+                    Penida, Bali) sebagai bukti resmi bahwa Anda telah memesan melalui website kami.
+                </div>
+
+                <!-- Footer Verification & Stamp -->
+                <div class="voucher-footer-verification">
+                    <div>
+                        <div style="font-weight: 700; color:#1e293b;">Villa DESILA Beach House</div>
+                        <div>Dusun Karangsari, Desa Suana, Nusa Penida, Bali</div>
+                    </div>
+                    <div>
+                        <span class="verified-stamp">
+                            <i class="fas fa-stamp"></i> VERIFIED E-BOOKING
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="voucher-actions">
+                <button type="button" class="btn btn-print" onclick="window.print()">
+                    <i class="fas fa-print"></i> Cetak / Simpan PDF Bukti Booking
+                </button>
+                <button type="button" class="btn btn-submit" id="btnSendVoucherWA" style="flex:1;">
+                    <i class="fab fa-whatsapp"></i> Konfirmasi ke WhatsApp Admin
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         GOOGLE TRANSLATE SCRIPT & LOGIKA JAVASCRIPT
+         ========================================================= -->
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'id',
+                includedLanguages: 'id,en,fr,de,ru,zh-CN,ja,es,it,nl,ko,ar',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function translateLanguage(langCode) {
+            const labelMap = { 'id': 'ID', 'en': 'EN', 'fr': 'FR', 'de': 'DE', 'ru': 'RU', 'zh-CN': 'ZH' };
+            const codeEl = document.getElementById('currentLangCode');
+            if (codeEl) codeEl.textContent = labelMap[langCode] || langCode.toUpperCase();
+
+            // Set cookie googtrans
+            const cookieVal = '/id/' + langCode;
+            document.cookie = 'googtrans=' + cookieVal + ';path=/;';
+            document.cookie = 'googtrans=' + cookieVal + ';domain=' + window.location.hostname + ';path=/;';
+
+            // Coba trigger element Google Translate jika tersedia
+            const selectEl = document.querySelector('.goog-te-combo');
+            if (selectEl) {
+                selectEl.value = langCode;
+                selectEl.dispatchEvent(new Event('change'));
+            } else {
+                location.reload();
+            }
+
+            const wrap = document.querySelector('.lang-dropdown-wrap');
+            if (wrap) wrap.classList.remove('active');
+        }
+
+        // Toggle dropdown bahasa saat diklik
+        document.addEventListener('DOMContentLoaded', () => {
+            const langBtn = document.getElementById('langToggleBtn');
+            const langWrap = document.querySelector('.lang-dropdown-wrap');
+            if (langBtn && langWrap) {
+                langBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    langWrap.classList.toggle('active');
+                });
+                document.addEventListener('click', () => {
+                    langWrap.classList.remove('active');
+                });
+            }
+        });
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Script Aplikasi Interaktif DESILA -->
     <script>
-        // Switch Tab Room vs Views
+        // Data Harga Resmi Villa DESILA Beach House
+        const prices = {
+            "Kamar Spesial": { price: 400000, type: "night", label: "Kamar Spesial", unit: "/ malam" },
+            "Kamar Ganda": { price: 400000, type: "night", label: "Kamar Ganda", unit: "/ malam" },
+            "Snorkeling Manta Bay": { price: 350000, type: "person", label: "Snorkeling Manta Bay (Sharing)", unit: "/ orang" },
+            "Private Snorkeling Boat": { price: 1200000, type: "fixed_boat", label: "Private Snorkeling Boat", unit: "/ perahu (maks 6 orang)" },
+            "Tour Barat": { price: 600000, type: "fixed_car", label: "Tour Barat (West Trip)", unit: "/ mobil" },
+            "Tour Timur": { price: 650000, type: "fixed_car", label: "Tour Timur (East Trip)", unit: "/ mobil" },
+            "Tour Kombinasi": { price: 800000, type: "fixed_car", label: "Tour Kombinasi (West & East)", unit: "/ mobil" },
+            "Memancing Jukung": { price: 1500000, type: "fixed_boat", label: "Memancing Tradisional Jukung", unit: "/ perahu (6 jam)" }
+        };
+
+        const adminPhone = "6282340510917";
+
+        // Switch Tab Room vs Galeri
         const pillBtns = document.querySelectorAll('.pill-btn');
         const contentSections = document.querySelectorAll('.content-section');
 
@@ -504,7 +1225,8 @@
 
                 btn.classList.add('active');
                 const targetId = btn.getAttribute('data-target');
-                document.getElementById(targetId).style.display = 'block';
+                const targetEl = document.getElementById(targetId);
+                if (targetEl) targetEl.style.display = 'block';
             });
         });
 
@@ -516,17 +1238,177 @@
             navLinks.classList.toggle('show');
         });
 
-        // Modal Functionality
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('show');
+            });
+        });
+
+        // Inisialisasi Tanggal Minimum (Hari ini)
+        const today = new Date().toISOString().split('T')[0];
+        const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+
+        const checkinInput = document.getElementById('checkin_date');
+        const checkoutInput = document.getElementById('checkout_date');
+        const aktivitasDateInput = document.getElementById('tanggal_aktivitas');
+
+        if (checkinInput) {
+            checkinInput.min = today;
+            checkinInput.value = today;
+        }
+        if (checkoutInput) {
+            checkoutInput.min = tomorrow;
+            checkoutInput.value = tomorrow;
+        }
+        if (aktivitasDateInput) {
+            aktivitasDateInput.min = today;
+            aktivitasDateInput.value = today;
+        }
+
+        // ==========================================
+        // KALKULASI HARGA OTOMATIS (KAMAR & AKTIVITAS)
+        // ==========================================
+        function calculateKamarTotal() {
+            const serviceKey = document.getElementById('service_kamar').value;
+            const checkinVal = checkinInput.value;
+            const checkoutVal = checkoutInput.value;
+            const qtyKamar = Math.max(1, parseInt(document.getElementById('jumlah_kamar').value, 10) || 1);
+
+            const serviceData = prices[serviceKey] || { price: 400000 };
+            let nights = 1;
+
+            if (checkinVal && checkoutVal) {
+                const d1 = new Date(checkinVal);
+                const d2 = new Date(checkoutVal);
+                const diffTime = d2 - d1;
+                const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+                nights = diffDays > 0 ? diffDays : 1;
+            }
+
+            const total = serviceData.price * nights * qtyKamar;
+
+            // Update Breakdown Info
+            document.getElementById('kamar_rate_info').textContent = 'Rp ' + serviceData.price.toLocaleString('id-ID');
+            document.getElementById('kamar_nights_info').textContent = nights + ' Malam (' + (checkinVal || '-') + ' s/d ' + (checkoutVal || '-') + ')';
+            document.getElementById('kamar_count_info').textContent = qtyKamar + ' Kamar';
+            document.getElementById('total_kamar').textContent = 'Rp ' + total.toLocaleString('id-ID');
+
+            return { total, nights, qtyKamar, serviceKey, pricePerNight: serviceData.price };
+        }
+
+        function calculateAktivitasTotal() {
+            const serviceKey = document.getElementById('service_aktivitas').value;
+            const guests = Math.max(1, parseInt(document.getElementById('guests_aktivitas').value, 10) || 1);
+            const labelGuests = document.getElementById('label_guests_aktivitas');
+
+            const serviceData = prices[serviceKey] || { price: 350000, type: 'person' };
+            let total = 0;
+            let schemeText = '';
+
+            if (serviceData.type === 'person') {
+                if (labelGuests) labelGuests.innerHTML = '<i class="fas fa-users"></i> Jumlah Orang / Peserta';
+                total = serviceData.price * guests;
+                schemeText = guests + ' Orang × Rp ' + serviceData.price.toLocaleString('id-ID');
+            } else if (serviceData.type === 'fixed_car') {
+                if (labelGuests) labelGuests.innerHTML = '<i class="fas fa-car"></i> Jumlah Mobil';
+                total = serviceData.price * guests;
+                schemeText = guests + ' Mobil × Rp ' + serviceData.price.toLocaleString('id-ID');
+            } else {
+                if (labelGuests) labelGuests.innerHTML = '<i class="fas fa-ship"></i> Jumlah Perahu / Boat';
+                total = serviceData.price * guests;
+                schemeText = guests + ' Perahu × Rp ' + serviceData.price.toLocaleString('id-ID');
+            }
+
+            // Update Breakdown Info
+            document.getElementById('aktivitas_rate_info').textContent = 'Rp ' + serviceData.price.toLocaleString('id-ID') + ' ' + (serviceData.unit || '');
+            document.getElementById('aktivitas_calc_scheme').textContent = schemeText;
+            document.getElementById('total_aktivitas').textContent = 'Rp ' + total.toLocaleString('id-ID');
+
+            return { total, guests, serviceKey, type: serviceData.type };
+        }
+
+        // Event Listener untuk Update Otomatis saat input berubah
+        ['service_kamar', 'checkin_date', 'checkout_date', 'jumlah_kamar', 'guests_kamar'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.addEventListener('change', calculateKamarTotal);
+                el.addEventListener('input', calculateKamarTotal);
+            }
+        });
+
+        // Otomatis sesuaikan checkout minimal ketika checkin berubah
+        if (checkinInput && checkoutInput) {
+            checkinInput.addEventListener('change', () => {
+                const nextDay = new Date(new Date(checkinInput.value).getTime() + 86400000).toISOString().split('T')[0];
+                checkoutInput.min = nextDay;
+                if (checkoutInput.value <= checkinInput.value) {
+                    checkoutInput.value = nextDay;
+                }
+                calculateKamarTotal();
+            });
+        }
+
+        ['service_aktivitas', 'tanggal_aktivitas', 'guests_aktivitas'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) {
+                el.addEventListener('change', calculateAktivitasTotal);
+                el.addEventListener('input', calculateAktivitasTotal);
+            }
+        });
+
+        // ==========================================
+        // PENGELOLAAN MODAL BOOKING
+        // ==========================================
         const modal = document.getElementById('bookingModal');
         const openModalBtns = document.querySelectorAll('.btn-open-modal');
         const closeModalBtn = document.getElementById('closeModal');
-        const serviceSelect = document.getElementById('service');
+        const formKamar = document.getElementById('formKamar');
+        const formAktivitas = document.getElementById('formAktivitas');
+        const modalTypeSelector = document.getElementById('modalTypeSelector');
+
+        document.getElementById('btnSelectRoom').addEventListener('click', () => {
+            modalTypeSelector.style.display = 'none';
+            formKamar.style.display = 'block';
+            calculateKamarTotal();
+        });
+
+        document.getElementById('btnSelectActivity').addEventListener('click', () => {
+            modalTypeSelector.style.display = 'none';
+            formAktivitas.style.display = 'block';
+            calculateAktivitasTotal();
+        });
 
         openModalBtns.forEach(btn => {
             btn.addEventListener('click', () => {
+                modalTypeSelector.style.display = 'none';
+                formKamar.style.display = 'none';
+                formAktivitas.style.display = 'none';
+
                 const serviceName = btn.getAttribute('data-service');
+
                 if (serviceName) {
-                    serviceSelect.value = serviceName;
+                    if (serviceName.includes("Kamar") || serviceName.includes("Room")) {
+                        const selectEl = document.getElementById('service_kamar');
+                        if (serviceName.includes("Spesial") || serviceName.includes("Special")) {
+                            selectEl.value = "Kamar Spesial";
+                        } else if (serviceName.includes("Ganda") || serviceName.includes("Double")) {
+                            selectEl.value = "Kamar Ganda";
+                        }
+                        formKamar.style.display = 'block';
+                        calculateKamarTotal();
+                    } else {
+                        const selectEl = document.getElementById('service_aktivitas');
+                        for (let opt of selectEl.options) {
+                            if (opt.value === serviceName || serviceName.includes(opt.value)) {
+                                selectEl.value = opt.value;
+                                break;
+                            }
+                        }
+                        formAktivitas.style.display = 'block';
+                        calculateAktivitasTotal();
+                    }
+                } else {
+                    modalTypeSelector.style.display = 'block';
                 }
                 modal.classList.add('active');
             });
@@ -540,33 +1422,139 @@
             if (e.target === modal) {
                 modal.classList.remove('active');
             }
+            if (e.target === voucherModal) {
+                voucherModal.classList.remove('active');
+            }
         });
 
-        // Submit Form ke WhatsApp
-        document.getElementById('bookingForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
-            const date = document.getElementById('date').value;
-            const guests = document.getElementById('guests').value;
-            const notes = document.getElementById('notes').value;
+        // ==========================================
+        // PENGELOLAAN MODAL BUKTI PEMBAYARAN / VOUCHER
+        // ==========================================
+        const voucherModal = document.getElementById('voucherModal');
+        const closeVoucherModal = document.getElementById('closeVoucherModal');
+        const btnSendVoucherWA = document.getElementById('btnSendVoucherWA');
+        let currentWhatsAppUrl = '';
 
-            const adminPhone = "+6282340510917"; // Ganti nomor WhatsApp Anda di sini
+        closeVoucherModal.addEventListener('click', () => {
+            voucherModal.classList.remove('active');
+        });
 
-            const message = `Halo DESILA Penida, saya ingin memesan:\n\n` +
-                `• *Nama*: ${name}\n` +
-                `• *No. WA*: ${phone}\n` +
-                `• *Layanan*: ${service}\n` +
-                `• *Tanggal*: ${date}\n` +
-                `• *Jumlah Orang*: ${guests}\n` +
-                `• *Catatan*: ${notes ? notes : '-'}\n\n` +
-                `Mohon konfirmasi ketersediaannya. Terima kasih!`;
+        btnSendVoucherWA.addEventListener('click', () => {
+            if (currentWhatsAppUrl) {
+                window.open(currentWhatsAppUrl, '_blank');
+            }
+        });
 
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/${adminPhone}?text=${encodedMessage}`, '_blank');
+        function generateBookingCode() {
+            const randomNum = Math.floor(1000 + Math.random() * 9000);
+            const now = new Date();
+            const yearMonth = now.getFullYear().toString().slice(2) + (now.getMonth() + 1).toString().padStart(2, '0');
+            return 'DSL-' + yearMonth + '-' + randomNum;
+        }
+
+        function formatIndoDateTime() {
+            const now = new Date();
+            const options = { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' };
+            return now.toLocaleDateString('id-ID', options) + ' WITA';
+        }
+
+        function showBookingVoucher(data) {
+            const bookingCode = generateBookingCode();
+            const bookingTime = formatIndoDateTime();
+
+            document.getElementById('v_kode').textContent = bookingCode;
+            document.getElementById('v_waktu').textContent = bookingTime;
+            document.getElementById('v_nama').textContent = data.nama;
+            document.getElementById('v_phone').textContent = data.phone;
+            document.getElementById('v_layanan').textContent = data.layanan;
+            document.getElementById('v_tanggal').textContent = data.tanggal;
+            document.getElementById('v_durasi').textContent = data.durasi;
+            document.getElementById('v_catatan').textContent = data.catatan || 'Tidak ada catatan tambahan';
+            document.getElementById('v_total').textContent = data.totalFormatted;
+
+            // Siapkan Teks Pesan WhatsApp Resmi
+            let message = `*KONFIRMASI PEMESANAN RESMI — VILLA DESILA BEACH HOUSE*\n\n` +
+                `Halo Admin Villa DESILA, saya telah melakukan pemesanan online melalui website resmi:\n\n` +
+                `🏷️ *KODE RESERVASI*: ${bookingCode}\n` +
+                `👤 *Nama Pemesan*: ${data.nama}\n` +
+                `📱 *Nomor WhatsApp*: ${data.phone}\n` +
+                `🏨 *Layanan*: ${data.layanan}\n` +
+                `📅 *Jadwal*: ${data.tanggal}\n` +
+                `👥 *Kapasitas / Durasi*: ${data.durasi}\n` +
+                `💰 *TOTAL TAGIHAN*: ${data.totalFormatted}\n` +
+                `📝 *Catatan*: ${data.catatan || '-'}\n\n` +
+                `Saya memegang bukti e-voucher resmi ini dan ingin mengonfirmasi ketersediaan serta info transfer pembayaran. Mohon instruksi selanjutnya. Terima kasih!`;
+
+            currentWhatsAppUrl = `https://wa.me/${adminPhone}?text=${encodeURIComponent(message)}`;
+
+            // Tampilkan Modal Voucher & Tutup Modal Form
             modal.classList.remove('active');
+            voucherModal.classList.add('active');
+        }
+
+        // SUBMIT FORM KAMAR
+        formKamar.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nama = document.getElementById('name_kamar').value.trim();
+            const phone = document.getElementById('phone_kamar').value.trim();
+            const checkin = checkinInput.value;
+            const checkout = checkoutInput.value;
+            const catatan = document.getElementById('notes_kamar').value.trim();
+
+            const calc = calculateKamarTotal();
+
+            showBookingVoucher({
+                nama: nama,
+                phone: phone,
+                layanan: 'Kamar Villa — ' + calc.serviceKey,
+                tanggal: 'Check-In: ' + checkin + '  s/d  Check-Out: ' + checkout,
+                durasi: calc.qtyKamar + ' Kamar &bull; ' + calc.nights + ' Malam Menginap',
+                catatan: catatan,
+                totalFormatted: 'Rp ' + calc.total.toLocaleString('id-ID')
+            });
         });
+
+        // SUBMIT FORM AKTIVITAS
+        formAktivitas.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const nama = document.getElementById('name_aktivitas').value.trim();
+            const phone = document.getElementById('phone_aktivitas').value.trim();
+            const tanggal = aktivitasDateInput.value;
+            const catatan = document.getElementById('notes_aktivitas').value.trim();
+
+            const calc = calculateAktivitasTotal();
+            let durasiText = calc.guests + ' Orang (Pax)';
+            if (calc.type === 'fixed_car') durasiText = calc.guests + ' Mobil';
+            if (calc.type === 'fixed_boat') durasiText = calc.guests + ' Perahu (Boat)';
+
+            showBookingVoucher({
+                nama: nama,
+                phone: phone,
+                layanan: 'Paket / Aktivitas — ' + calc.serviceKey,
+                tanggal: 'Tanggal Pelaksanaan: ' + tanggal,
+                durasi: durasiText,
+                catatan: catatan,
+                totalFormatted: 'Rp ' + calc.total.toLocaleString('id-ID')
+            });
+        });
+
+        // Salin Nomor Rekening dengan Feedback
+        function copyToClipboard(elementId, btnElement) {
+            const text = document.getElementById(elementId).innerText.replace(/-/g, '').trim();
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btnElement.innerText;
+                btnElement.innerText = '✓ Tersalin!';
+                btnElement.style.background = '#25D366';
+                btnElement.style.color = '#fff';
+                setTimeout(() => {
+                    btnElement.innerText = originalText;
+                    btnElement.style.background = '';
+                    btnElement.style.color = '';
+                }, 2000);
+            }).catch(err => {
+                alert('No Rekening: ' + text);
+            });
+        }
     </script>
 </body>
 
